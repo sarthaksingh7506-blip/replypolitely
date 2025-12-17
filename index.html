@@ -41,10 +41,12 @@
         Clear, polite responses for awkward workplace emails. Stop overthinking and hit send.
     </p>
     <div class="flex flex-col md:flex-row gap-4 justify-center">
-        <a href="#situations" class="px-8 py-3.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400">
+        <a href="#situations"
+           class="px-8 py-3.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400">
             Browse replies
         </a>
-        <a href="/reply/noted.html" class="px-8 py-3.5 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300">
+        <a href="/reply/noted.html"
+           class="px-8 py-3.5 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300">
             Reply to “Noted”
         </a>
     </div>
@@ -83,7 +85,6 @@
                 Thank you for the invitation. Unfortunately, I don’t have the bandwidth to take this on right now.
             </p>
             <button onclick="copyToClipboard(this)"
-                aria-label="Copy reply"
                 class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 active:scale-95 transition">
                 <span>Copy reply</span>
             </button>
@@ -94,7 +95,6 @@
                 Thanks for sending this over! I’ve received it and will review shortly.
             </p>
             <button onclick="copyToClipboard(this)"
-                aria-label="Copy reply"
                 class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 active:scale-95 transition">
                 <span>Copy reply</span>
             </button>
@@ -125,26 +125,44 @@
 
 <!-- DISCLAIMER -->
 <section class="max-w-4xl mx-auto px-6 pb-16">
-    <div class="bg-slate-100 border border-slate-200 rounded-xl p-6 text-sm text-slate-600 leading-relaxed">
-        <strong class="text-slate-800">Disclaimer:</strong>
-        The email replies and templates provided on ReplyPolitely are for general informational purposes only.
-        They do not constitute legal, HR, or professional advice.
-        Users are responsible for reviewing and adapting any content before sending it in a professional context.
+    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-100 to-white p-6">
+        <p class="text-xs uppercase tracking-wide text-slate-500 mb-2">
+            Disclaimer
+        </p>
+        <p class="text-sm text-slate-600 leading-relaxed">
+            The email replies and templates provided on
+            <strong class="text-slate-800">ReplyPolitely</strong> are for general informational purposes only.
+            They do not constitute legal, HR, or professional advice.
+            Users are responsible for reviewing and adapting any content before sending it in a professional context.
+        </p>
     </div>
 </section>
 
 </main>
 
 <!-- FOOTER -->
-<footer class="border-t border-slate-200 bg-white py-10">
-    <div class="max-w-6xl mx-auto px-6 flex justify-between text-sm text-slate-500">
-        <span>© 2024 ReplyPolitely</span>
-        <div class="flex gap-6">
-            <a href="/about.html" class="hover:text-slate-900">About</a>
-            <a href="/privacy.html" class="hover:text-slate-900">Privacy</a>
-            <a href="/terms.html" class="hover:text-slate-900">Terms</a>
-            <a href="/disclaimer.html" class="hover:text-slate-900">Disclaimer</a>
+<footer class="border-t border-slate-200 bg-white py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+
+        <div class="text-center md:text-left">
+            <p class="text-slate-900 font-semibold tracking-tight">
+                ReplyPolitely
+            </p>
+            <p class="text-xs text-slate-500 mt-1">
+                Professional email replies. Simple. Clear. Polite.
+            </p>
         </div>
+
+        <div class="flex gap-6 text-sm text-slate-500">
+            <a href="/about.html" class="hover:text-slate-900 transition">About</a>
+            <a href="/privacy.html" class="hover:text-slate-900 transition">Privacy</a>
+            <a href="/terms.html" class="hover:text-slate-900 transition">Terms</a>
+            <a href="/disclaimer.html" class="hover:text-slate-900 transition">Disclaimer</a>
+        </div>
+    </div>
+
+    <div class="mt-8 text-center text-xs text-slate-400">
+        © 2024 ReplyPolitely. All rights reserved.
     </div>
 </footer>
 
