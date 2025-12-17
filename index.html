@@ -42,12 +42,12 @@
     </p>
     <div class="flex flex-col md:flex-row gap-4 justify-center">
         <a href="#situations"
-           class="px-8 py-3.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400">
+           class="px-8 py-3.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800">
             Browse replies
         </a>
-        <a href="/reply/noted.html"
-           class="px-8 py-3.5 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300">
-            Reply to “Noted”
+        <a href="/reply/ok.html"
+           class="px-8 py-3.5 bg-white border border-slate-200 rounded-lg hover:bg-slate-50">
+            Reply to “OK”
         </a>
     </div>
 </section>
@@ -57,49 +57,45 @@
     <h2 class="text-2xl font-bold text-slate-900 mb-8">Common Situations</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <a href="/reply/noted.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
+        <a href="/reply/ok.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Reply to “OK”</h3>
+            <p class="text-sm text-slate-600">Clarify next steps or close the loop.</p>
+        </a>
+
+        <a href="/reply/noted.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
             <h3 class="text-lg font-semibold mb-2">Reply to “Noted”</h3>
-            <p class="text-sm text-slate-600">When a one-word reply leaves things unclear.</p>
+            <p class="text-sm text-slate-600">Acknowledge without sounding robotic.</p>
         </a>
 
-        <a href="/reply/follow-up.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
-            <h3 class="text-lg font-semibold mb-2">Follow-up Email</h3>
-            <p class="text-sm text-slate-600">Polite reminders without sounding pushy.</p>
+        <a href="/reply/thanks.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Reply to “Thanks”</h3>
+            <p class="text-sm text-slate-600">Respond politely or end the thread.</p>
         </a>
 
-        <a href="/reply/apology.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
+        <a href="/reply/follow-up.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Follow-Up Email</h3>
+            <p class="text-sm text-slate-600">Nudge without being pushy.</p>
+        </a>
+
+        <a href="/reply/apology.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
             <h3 class="text-lg font-semibold mb-2">Professional Apology</h3>
-            <p class="text-sm text-slate-600">Own mistakes and move forward confidently.</p>
+            <p class="text-sm text-slate-600">Own mistakes confidently.</p>
         </a>
-    </div>
-</section>
 
-<!-- TEMPLATES -->
-<section class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Popular Templates</h2>
+        <a href="/reply/late-email.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Late Email Reply</h3>
+            <p class="text-sm text-slate-600">Apologize briefly and move on.</p>
+        </a>
 
-    <div class="space-y-6">
+        <a href="/reply/say-no.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">How to Say No</h3>
+            <p class="text-sm text-slate-600">Set boundaries respectfully.</p>
+        </a>
 
-        <div class="template-card bg-white rounded-2xl border border-slate-200 p-6">
-            <p class="reply-text text-lg font-medium mb-4">
-                Thank you for the invitation. Unfortunately, I don’t have the bandwidth to take this on right now.
-            </p>
-            <button onclick="copyToClipboard(this)"
-                class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 active:scale-95 transition">
-                <span>Copy reply</span>
-            </button>
-        </div>
-
-        <div class="template-card bg-white rounded-2xl border border-slate-200 p-6">
-            <p class="reply-text text-lg font-medium mb-4">
-                Thanks for sending this over! I’ve received it and will review shortly.
-            </p>
-            <button onclick="copyToClipboard(this)"
-                class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 active:scale-95 transition">
-                <span>Copy reply</span>
-            </button>
-        </div>
-
+        <a href="/reply/decline-meeting.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Decline a Meeting</h3>
+            <p class="text-sm text-slate-600">Protect your time professionally.</p>
+        </a>
     </div>
 </section>
 
@@ -114,7 +110,7 @@
         </div>
         <div>
             <h3 class="font-semibold mb-2">Copy a reply</h3>
-            <p class="text-sm text-slate-600">One click, no formatting issues.</p>
+            <p class="text-sm text-slate-600">One click. No formatting issues.</p>
         </div>
         <div>
             <h3 class="font-semibold mb-2">Send confidently</h3>
@@ -123,62 +119,26 @@
     </div>
 </section>
 
-<!-- DISCLAIMER -->
-<section class="max-w-4xl mx-auto px-6 pb-16">
-    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-100 to-white p-6">
-        <p class="text-xs uppercase tracking-wide text-slate-500 mb-2">
-            Disclaimer
-        </p>
-        <p class="text-sm text-slate-600 leading-relaxed">
-            The email replies and templates provided on
-            <strong class="text-slate-800">ReplyPolitely</strong> are for general informational purposes only.
-            They do not constitute legal, HR, or professional advice.
-            Users are responsible for reviewing and adapting any content before sending it in a professional context.
-        </p>
-    </div>
-</section>
-
 </main>
 
 <!-- FOOTER -->
 <footer class="border-t border-slate-200 bg-white py-12">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-
-        <div class="text-center md:text-left">
-            <p class="text-slate-900 font-semibold tracking-tight">
-                ReplyPolitely
-            </p>
-            <p class="text-xs text-slate-500 mt-1">
-                Professional email replies. Simple. Clear. Polite.
-            </p>
+        <div>
+            <p class="font-semibold">ReplyPolitely</p>
+            <p class="text-xs text-slate-500">Professional email replies. Simple. Clear. Polite.</p>
         </div>
-
         <div class="flex gap-6 text-sm text-slate-500">
-            <a href="/about.html" class="hover:text-slate-900 transition">About</a>
-            <a href="/privacy.html" class="hover:text-slate-900 transition">Privacy</a>
-            <a href="/terms.html" class="hover:text-slate-900 transition">Terms</a>
-            <a href="/disclaimer.html" class="hover:text-slate-900 transition">Disclaimer</a>
+            <a href="/about.html">About</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/disclaimer.html">Disclaimer</a>
         </div>
     </div>
-
     <div class="mt-8 text-center text-xs text-slate-400">
         © 2024 ReplyPolitely. All rights reserved.
     </div>
 </footer>
-
-<script>
-function copyToClipboard(button) {
-    const card = button.closest('.template-card');
-    const text = card.querySelector('.reply-text').innerText.trim();
-    const span = button.querySelector('span');
-    const original = span.innerText;
-
-    navigator.clipboard.writeText(text).then(() => {
-        span.innerText = "Copied!";
-        setTimeout(() => span.innerText = original, 1800);
-    });
-}
-</script>
 
 </body>
 </html>
