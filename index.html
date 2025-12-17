@@ -41,10 +41,10 @@
         Clear, polite responses for awkward workplace emails. Stop overthinking and hit send.
     </p>
     <div class="flex flex-col md:flex-row gap-4 justify-center">
-        <a href="#situations" class="px-8 py-3.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800">
+        <a href="#situations" class="px-8 py-3.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400">
             Browse replies
         </a>
-        <a href="/reply/noted.html" class="px-8 py-3.5 bg-white border border-slate-200 rounded-lg hover:bg-slate-50">
+        <a href="/reply/noted.html" class="px-8 py-3.5 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-300">
             Reply to “Noted”
         </a>
     </div>
@@ -55,17 +55,17 @@
     <h2 class="text-2xl font-bold text-slate-900 mb-8">Common Situations</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <a href="/reply/noted.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+        <a href="/reply/noted.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold mb-2">Reply to “Noted”</h3>
             <p class="text-sm text-slate-600">When a one-word reply leaves things unclear.</p>
         </a>
 
-        <a href="/reply/follow-up.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+        <a href="/reply/follow-up.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold mb-2">Follow-up Email</h3>
             <p class="text-sm text-slate-600">Polite reminders without sounding pushy.</p>
         </a>
 
-        <a href="/reply/apology.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+        <a href="/reply/apology.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold mb-2">Professional Apology</h3>
             <p class="text-sm text-slate-600">Own mistakes and move forward confidently.</p>
         </a>
@@ -84,7 +84,7 @@
             </p>
             <button onclick="copyToClipboard(this)"
                 aria-label="Copy reply"
-                class="copy-btn px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800">
+                class="copy-btn px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 active:scale-95 transition">
                 <span>Copy reply</span>
             </button>
         </div>
@@ -95,7 +95,7 @@
             </p>
             <button onclick="copyToClipboard(this)"
                 aria-label="Copy reply"
-                class="copy-btn px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50">
+                class="copy-btn px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 active:scale-95 transition">
                 <span>Copy reply</span>
             </button>
         </div>
