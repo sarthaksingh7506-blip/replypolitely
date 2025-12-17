@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>How to Reschedule a Meeting Politely | ReplyPolitely</title>
+    <meta name="description" content="Need to move a meeting? Use professional email templates to reschedule calls politely without sounding disorganized or unprofessional.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://replypolitely.site/reply/meeting-reschedule.html">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="text-lg font-bold text-slate-900">ReplyPolitely.</a>
+        <div class="flex items-center gap-4 text-sm">
+            <a href="/reply/" class="text-slate-500 hover:text-slate-900">
+                Browse all reply templates
+            </a>
+            <a href="/" class="text-slate-500 hover:text-slate-900">
+                Home
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main class="flex-grow max-w-3xl mx-auto px-6 py-12 md:py-16">
+<article>
+
+<section class="mb-12">
+    <span class="inline-block mb-4 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full uppercase tracking-wide">
+        Email Guide
+    </span>
+
+    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+        How to Reschedule a Meeting Politely
+    </h1>
+
+    <p class="text-lg text-slate-600 leading-relaxed">
+        Scheduling conflicts happen. The key to rescheduling professionally is to respect the other
+        person’s time by giving notice and offering alternatives. If the meeting is no longer necessary,
+        you may want to
+        <a href="/reply/decline-meeting.html" class="underline font-medium text-slate-700 hover:text-slate-900">
+            decline the meeting instead
+        </a>.
+    </p>
+</section>
+
+<section class="space-y-6 mb-16">
+    <h2 class="text-sm font-semibold text-slate-500 uppercase tracking-wider">
+        Copy & Paste Replies
+    </h2>
+
+    <div class="group bg-white border border-slate-200 rounded-xl p-6">
+        <span class="inline-block mb-3 text-xs font-medium text-slate-600 bg-slate-100 rounded px-2 py-0.5">
+            Time Conflict
+        </span>
+        <p class="reply-text text-lg font-medium mb-4">
+            I have a conflict at our scheduled time. Would it be possible to move our call to Thursday afternoon instead?
+        </p>
+        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition">
+            <span class="btn-text">Copy Reply</span>
+        </button>
+    </div>
+
+    <div class="group bg-white border border-slate-200 rounded-xl p-6">
+        <span class="inline-block mb-3 text-xs font-medium text-indigo-700 bg-indigo-50 rounded px-2 py-0.5">
+            Client-Facing
+        </span>
+        <p class="reply-text text-lg font-medium mb-4">
+            I’ll need to reschedule to ensure I can give this my full attention. Would early next week work for you?
+        </p>
+        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+            <span class="btn-text">Copy Reply</span>
+        </button>
+    </div>
+
+    <div class="group bg-white border border-slate-200 rounded-xl p-6">
+        <span class="inline-block mb-3 text-xs font-medium text-amber-700 bg-amber-50 rounded px-2 py-0.5">
+            Last-Minute
+        </span>
+        <p class="reply-text text-lg font-medium mb-4">
+            Apologies for the short notice — something urgent came up. I’ll follow up shortly with alternative times.
+        </p>
+        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+            <span class="btn-text">Copy Reply</span>
+        </button>
+    </div>
+</section>
+
+<section class="border-t border-slate-200 pt-12">
+    <h3 class="text-lg font-bold mb-6">Related Situations</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+        <a href="/reply/decline-meeting.html" class="border border-slate-200 rounded-lg p-4 hover:bg-slate-50">
+            Decline a Meeting
+        </a>
+        <a href="/reply/follow-up.html" class="border border-slate-200 rounded-lg p-4 hover:bg-slate-50">
+            Follow-Up Email
+        </a>
+    </div>
+</section>
+
+</article>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-slate-200 py-10 mt-auto">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+        <span>© 2024 ReplyPolitely.</span>
+        <div class="flex gap-6">
+            <a href="/reply/" class="hover:text-slate-900">All Replies</a>
+            <a href="/about.html" class="hover:text-slate-900">About</a>
+            <a href="/privacy.html" class="hover:text-slate-900">Privacy</a>
+            <a href="/terms.html" class="hover:text-slate-900">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+async function copyToClipboard(button) {
+    const card = button.closest('.group');
+    const text = card.querySelector('.reply-text').innerText.trim();
+    const label = button.querySelector('.btn-text');
+    const original = label.innerText;
+
+    try {
+        await navigator.clipboard.writeText(text);
+        label.innerText = "Copied!";
+        setTimeout(() => label.innerText = original, 1500);
+    } catch {
+        label.innerText = "Error";
+    }
+}
+</script>
+
+</body>
+</html>
