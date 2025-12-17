@@ -19,12 +19,11 @@
 
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
 
-<!-- HEADER + NAV -->
+<!-- HEADER -->
 <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="/" class="text-lg font-bold text-slate-900">ReplyPolitely.</a>
 
-        <!-- DESKTOP NAV -->
         <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
             <a href="/reply/ok.html" class="hover:text-slate-900">OK</a>
             <a href="/reply/thanks.html" class="hover:text-slate-900">Thanks</a>
@@ -34,12 +33,10 @@
             <a href="/reply/decline-meeting.html" class="text-slate-900">Meetings</a>
         </nav>
 
-        <!-- MOBILE -->
         <a href="/" class="text-sm text-slate-500 hover:text-slate-900 md:hidden">Home</a>
     </div>
 </header>
 
-<!-- MAIN -->
 <main class="flex-grow max-w-3xl mx-auto px-6 py-12 md:py-16">
 <article>
 
@@ -52,7 +49,7 @@
     </h1>
     <p class="text-lg text-slate-600 leading-relaxed">
         Not every meeting is necessary. Declining thoughtfully protects your time without damaging trust.
-        The goal is to be respectful, clear, and outcome-focused—not dismissive.
+        The goal is to be respectful, clear, and outcome-focused.
     </p>
 </section>
 
@@ -66,7 +63,7 @@
         <p class="reply-text text-lg font-medium mb-4">
             Thanks for the invite. I have a conflict at that time. Would it be possible to move this to Thursday afternoon?
         </p>
-        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition">
+        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800">
             <span class="btn-text">Copy Reply</span>
         </button>
     </div>
@@ -76,59 +73,9 @@
         <p class="reply-text text-lg font-medium mb-4">
             Thanks for including me. Based on the agenda, I don’t think my input is needed, so I’ll step out to focus on other priorities.
         </p>
-        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 border border-slate-200 rounded-lg hover:bg-slate-50 transition">
+        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 border border-slate-200 rounded-lg hover:bg-slate-50">
             <span class="btn-text">Copy Reply</span>
         </button>
-    </div>
-
-    <div class="group bg-white border border-slate-200 rounded-xl p-6">
-        <span class="inline-block mb-3 text-xs font-medium text-indigo-700 bg-indigo-50 rounded px-2 py-0.5">Delegate</span>
-        <p class="reply-text text-lg font-medium mb-4">
-            I won’t be able to attend, but I’ve looped in Sarah, who’s closer to the details and can represent our team.
-        </p>
-        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 border border-slate-200 rounded-lg hover:bg-slate-50 transition">
-            <span class="btn-text">Copy Reply</span>
-        </button>
-    </div>
-
-    <div class="group bg-white border border-slate-200 rounded-xl p-6">
-        <span class="inline-block mb-3 text-xs font-medium text-slate-600 bg-slate-100 rounded px-2 py-0.5">Asynchronous Option</span>
-        <p class="reply-text text-lg font-medium mb-4">
-            I can’t commit to a full meeting, but I’m happy to review the materials and send feedback by end of day.
-        </p>
-        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 border border-slate-200 rounded-lg hover:bg-slate-50 transition">
-            <span class="btn-text">Copy Reply</span>
-        </button>
-    </div>
-
-    <div class="group bg-white border border-slate-200 rounded-xl p-6">
-        <span class="inline-block mb-3 text-xs font-medium text-slate-600 bg-slate-100 rounded px-2 py-0.5">Firm Decline</span>
-        <p class="reply-text text-lg font-medium mb-4">
-            I’ll need to decline as I’m focused on a critical deadline this week. Please flag any urgent action items for me.
-        </p>
-        <button onclick="copyToClipboard(this)" class="px-5 py-2.5 border border-slate-200 rounded-lg hover:bg-slate-50 transition">
-            <span class="btn-text">Copy Reply</span>
-        </button>
-    </div>
-</section>
-
-<section class="grid md:grid-cols-2 gap-8 mb-16">
-    <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6">
-        <h3 class="font-bold mb-3">When to Decline</h3>
-        <ul class="text-sm text-slate-700 space-y-2 list-disc list-inside">
-            <li>The meeting has no clear agenda</li>
-            <li>Your role is undefined</li>
-            <li>It conflicts with high-priority work</li>
-        </ul>
-    </div>
-
-    <div class="bg-slate-100 border border-slate-200 rounded-xl p-6">
-        <h3 class="font-bold mb-3">When to Attend</h3>
-        <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
-            <li>You are a key decision-maker</li>
-            <li>Your presence unblocks others</li>
-            <li>The relationship is new or sensitive</li>
-        </ul>
     </div>
 </section>
 
@@ -142,12 +89,18 @@
             Follow-Up Email
         </a>
     </div>
+
+    <!-- HUB LINK (IMPORTANT) -->
+    <div class="mt-10 text-center">
+        <a href="/reply/" class="text-sm font-medium text-slate-500 hover:text-slate-900">
+            Browse all reply templates →
+        </a>
+    </div>
 </section>
 
 </article>
 </main>
 
-<!-- FOOTER -->
 <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
     <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
         <span>© 2024 ReplyPolitely.</span>
