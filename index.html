@@ -1,155 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ReplyPolitey – Professional Replies</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>ReplyPolitely | Professional Email Replies</title>
+    <meta name="description" content="Instant, professional email replies for common workplace situations. Copy-paste polite responses without overthinking.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://replypolitely.site/">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .btn-transition { transition: all 0.2s ease; }
-  </style>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 min-h-screen p-4 md:p-10">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-slate-200 selection:text-slate-900">
 
-  <main class="max-w-3xl mx-auto space-y-8">
+<!-- NAV -->
+<nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
+    <a href="/" class="text-xl font-bold tracking-tight text-slate-900">ReplyPolitely.</a>
+    <div class="hidden md:flex gap-6 text-sm font-medium text-slate-600">
+        <a href="#situations" class="hover:text-slate-900">Situations</a>
+        <a href="#how-it-works" class="hover:text-slate-900">How it works</a>
+        <a href="/about.html" class="hover:text-slate-900">About</a>
+    </div>
+</nav>
 
-    <!-- Header -->
-    <header class="space-y-2">
-      <h1 class="text-2xl md:text-3xl font-semibold text-slate-900">
-        Copy-Paste Professional Replies
-      </h1>
-      <p class="text-slate-500 text-sm md:text-base">
-        Choose a response. Copy instantly. No overthinking.
-      </p>
-    </header>
+<main>
 
-    <!-- Reply Card -->
-    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
+<!-- HERO -->
+<section class="max-w-4xl mx-auto px-6 py-20 md:py-32 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
+        Professional email replies.<br>
+        <span class="text-slate-500">Instantly.</span>
+    </h1>
+    <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+        Clear, polite responses for awkward workplace emails. Stop overthinking and hit send.
+    </p>
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="#situations" class="px-8 py-3.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800">
+            Browse replies
+        </a>
+        <a href="/reply/noted.html" class="px-8 py-3.5 bg-white border border-slate-200 rounded-lg hover:bg-slate-50">
+            Reply to “Noted”
+        </a>
+    </div>
+</section>
 
-      <!-- Tags -->
-      <div class="flex items-center gap-2">
-        <span class="text-xs font-medium px-2 py-1 rounded-md bg-indigo-50 text-indigo-600">
-          Recommended
-        </span>
-        <span class="text-xs font-medium px-2 py-1 rounded-md bg-slate-100 text-slate-600">
-          Professional
-        </span>
-      </div>
+<!-- SITUATIONS -->
+<section id="situations" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold text-slate-900 mb-8">Common Situations</h2>
 
-      <!-- Reply -->
-      <p class="reply-text text-slate-700 leading-relaxed text-sm md:text-base">
-        Thank you for the update. I’ve noted the details and will proceed accordingly.
-        Please let me know if anything further is required from my side.
-      </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="/reply/noted.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Reply to “Noted”</h3>
+            <p class="text-sm text-slate-600">When a one-word reply leaves things unclear.</p>
+        </a>
 
-      <!-- Guidance -->
-      <p class="text-xs text-slate-500">
-        When to use: Safe default for managers, clients, or formal workplace threads.
-      </p>
+        <a href="/reply/follow-up.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Follow-up Email</h3>
+            <p class="text-sm text-slate-600">Polite reminders without sounding pushy.</p>
+        </a>
 
-      <!-- Action -->
-      <div class="flex justify-end pt-2 border-t border-slate-100">
-        <button
-          class="copy-btn btn-transition flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-slate-900 text-white hover:bg-slate-800 active:scale-95"
-          aria-live="polite"
-        >
-          <svg class="icon-copy w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2" />
-          </svg>
-          <svg class="icon-check w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M5 13l4 4L19 7" />
-          </svg>
-          <span class="btn-text">Copy reply</span>
-        </button>
-      </div>
-    </section>
+        <a href="/reply/apology.html" class="block p-6 bg-white rounded-xl border border-slate-200 hover:shadow-md">
+            <h3 class="text-lg font-semibold mb-2">Professional Apology</h3>
+            <p class="text-sm text-slate-600">Own mistakes and move forward confidently.</p>
+        </a>
+    </div>
+</section>
 
-    <!-- Second Variant -->
-    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
+<!-- TEMPLATES -->
+<section class="max-w-4xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Popular Templates</h2>
 
-      <div class="flex items-center gap-2">
-        <span class="text-xs font-medium px-2 py-1 rounded-md bg-emerald-50 text-emerald-600">
-          Friendly
-        </span>
-      </div>
+    <div class="space-y-6">
 
-      <p class="reply-text text-slate-700 leading-relaxed text-sm md:text-base">
-        Thanks for sharing this. I’ve noted it and will review shortly.
-        I’ll reach out if I need anything else.
-      </p>
+        <div class="template-card bg-white rounded-2xl border border-slate-200 p-6">
+            <p class="reply-text text-lg font-medium mb-4">
+                Thank you for the invitation. Unfortunately, I don’t have the bandwidth to take this on right now.
+            </p>
+            <button onclick="copyToClipboard(this)"
+                aria-label="Copy reply"
+                class="copy-btn px-5 py-2.5 bg-slate-900 text-white rounded-lg hover:bg-slate-800">
+                <span>Copy reply</span>
+            </button>
+        </div>
 
-      <p class="text-xs text-slate-500">
-        When to use: Internal teams or casual professional conversations.
-      </p>
+        <div class="template-card bg-white rounded-2xl border border-slate-200 p-6">
+            <p class="reply-text text-lg font-medium mb-4">
+                Thanks for sending this over! I’ve received it and will review shortly.
+            </p>
+            <button onclick="copyToClipboard(this)"
+                aria-label="Copy reply"
+                class="copy-btn px-5 py-2.5 bg-white border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50">
+                <span>Copy reply</span>
+            </button>
+        </div>
 
-      <div class="flex justify-end pt-2 border-t border-slate-100">
-        <button
-          class="copy-btn btn-transition flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border border-slate-200 text-slate-700 hover:bg-slate-50 active:scale-95"
-          aria-live="polite"
-        >
-          <svg class="icon-copy w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 7v8a2 2 0 002 2h6" />
-          </svg>
-          <svg class="icon-check w-4 h-4 hidden text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M5 13l4 4L19 7" />
-          </svg>
-          <span class="btn-text">Copy reply</span>
-        </button>
-      </div>
-    </section>
+    </div>
+</section>
 
-  </main>
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-2xl font-bold text-center mb-12">How it works</h2>
 
-  <!-- JS -->
-  <script>
-    document.querySelectorAll('.copy-btn').forEach(button => {
-      button.addEventListener('click', async () => {
-        const card = button.closest('section');
-        const text = card.querySelector('.reply-text').innerText.trim();
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div>
+            <h3 class="font-semibold mb-2">Choose a situation</h3>
+            <p class="text-sm text-slate-600">Pick the scenario you’re dealing with.</p>
+        </div>
+        <div>
+            <h3 class="font-semibold mb-2">Copy a reply</h3>
+            <p class="text-sm text-slate-600">One click, no formatting issues.</p>
+        </div>
+        <div>
+            <h3 class="font-semibold mb-2">Send confidently</h3>
+            <p class="text-sm text-slate-600">Paste, tweak if needed, send.</p>
+        </div>
+    </div>
+</section>
 
-        try {
-          await navigator.clipboard.writeText(text);
+</main>
 
-          const copyIcon = button.querySelector('.icon-copy');
-          const checkIcon = button.querySelector('.icon-check');
-          const textSpan = button.querySelector('.btn-text');
+<!-- FOOTER -->
+<footer class="border-t border-slate-200 bg-white py-10">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between text-sm text-slate-500">
+        <span>© 2024 ReplyPolitely</span>
+        <div class="flex gap-6">
+            <a href="/about.html" class="hover:text-slate-900">About</a>
+            <a href="/privacy.html" class="hover:text-slate-900">Privacy</a>
+            <a href="/terms.html" class="hover:text-slate-900">Terms</a>
+        </div>
+    </div>
+</footer>
 
-          copyIcon.classList.add('hidden');
-          checkIcon.classList.remove('hidden');
-          textSpan.textContent = 'Copied';
+<script>
+function copyToClipboard(button) {
+    const card = button.closest('.template-card');
+    const text = card.querySelector('.reply-text').innerText.trim();
+    const span = button.querySelector('span');
+    const original = span.innerText;
 
-          button.classList.add('bg-green-600', 'text-white');
-          button.classList.remove('bg-slate-900');
-
-          setTimeout(() => {
-            copyIcon.classList.remove('hidden');
-            checkIcon.classList.add('hidden');
-            textSpan.textContent = 'Copy reply';
-
-            button.classList.remove('bg-green-600', 'text-white');
-            if (!button.classList.contains('border')) {
-              button.classList.add('bg-slate-900');
-            }
-          }, 1800);
-
-        } catch {
-          alert('Copy failed. Please try again.');
-        }
-      });
+    navigator.clipboard.writeText(text).then(() => {
+        span.innerText = "Copied!";
+        setTimeout(() => span.innerText = original, 1800);
     });
-  </script>
+}
+</script>
 
 </body>
 </html>
