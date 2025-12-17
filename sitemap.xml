@@ -3,48 +3,40 @@
 
   <url>
     <loc>https://replypolitely.site/</loc>
-    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://replypolitely.site/reply/</loc>
-    <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://replypolitely.site/reply/ok.html</loc>
-  </url>
+  <!-- Core Acknowledgements -->
+  <url><loc>https://replypolitely.site/reply/ok.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/noted.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/thanks.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/received.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/well-received.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/seen.html</loc></url>
 
-  <url>
-    <loc>https://replypolitely.site/reply/noted.html</loc>
-  </url>
+  <!-- Follow-ups & Status -->
+  <url><loc>https://replypolitely.site/reply/follow-up.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/no-response.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/will-review.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/will-do.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/approved.html</loc></url>
 
-  <url>
-    <loc>https://replypolitely.site/reply/thanks.html</loc>
-  </url>
+  <!-- Requests & Confirmations -->
+  <url><loc>https://replypolitely.site/reply/as-discussed.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/per-our-conversation.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/as-per-your-request.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/please-advise.html</loc></url>
 
-  <url>
-    <loc>https://replypolitely.site/reply/follow-up.html</loc>
-  </url>
+  <!-- Apologies -->
+  <url><loc>https://replypolitely.site/reply/apology.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/late-email.html</loc></url>
 
-  <url>
-    <loc>https://replypolitely.site/reply/no-response.html</loc>
-  </url>
-
-  <url>
-    <loc>https://replypolitely.site/reply/apology.html</loc>
-  </url>
-
-  <url>
-    <loc>https://replypolitely.site/reply/late-email.html</loc>
-  </url>
-
-  <url>
-    <loc>https://replypolitely.site/reply/say-no.html</loc>
-  </url>
-
-  <url>
-    <loc>https://replypolitely.site/reply/decline-meeting.html</loc>
-  </url>
+  <!-- Meetings & Boundaries -->
+  <url><loc>https://replypolitely.site/reply/say-no.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/decline-meeting.html</loc></url>
+  <url><loc>https://replypolitely.site/reply/meeting-reschedule.html</loc></url>
 
 </urlset>
