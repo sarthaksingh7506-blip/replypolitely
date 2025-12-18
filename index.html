@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReplyPolitely | Professional Email Reply Templates</title>
-    <meta name="description" content="Professional email reply templates for workplace communication. Copy-paste responses for apologies, follow-ups, acknowledgements, and polite refusals.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://replypolitely.site/">
+    <meta name="description" content="Professional email reply templates for workplace communication. Copy-paste responses for apologies, follow-ups, acknowledgements, and polite refusals." />
+    <link rel="canonical" href="https://replypolitely.site/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -20,7 +19,8 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        blue: { 50:'#eff6ff',100:'#dbeafe',600:'#2563eb',700:'#1d4ed8',900:'#1e3a8a' }
+                        primary: '#2874f0',
+                        dark: '#000000'
                     }
                 }
             }
@@ -35,129 +35,150 @@
 
 <!-- NAV -->
 <nav class="fixed top-0 w-full z-50 border-b border-slate-100 glass-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold tracking-tight text-slate-900">Reply<span class="text-blue-600">Politely</span></a>
+    <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+        <a href="/" class="flex items-center space-x-2">
+            <img src="/logo.svg" alt="ReplyPolitely Logo" class="h-8 w-8" />
+            <span class="text-2xl font-bold tracking-tight">Reply<span class="text-primary">Politely</span></span>
+        </a>
+
         <div class="hidden md:flex space-x-8 items-center">
-            <a href="/reply/" class="text-sm font-medium text-slate-600 hover:text-blue-600">Templates</a>
-            <a href="#how-it-works" class="text-sm font-medium text-slate-600 hover:text-blue-600">How it Works</a>
-            <a href="/about.html" class="text-sm font-medium text-slate-600 hover:text-blue-600">About</a>
-            <a href="/reply/" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">Get Started</a>
+            <a href="/reply/" class="text-sm font-medium text-slate-600 hover:text-primary">Templates</a>
+            <a href="#how-it-works" class="text-sm font-medium text-slate-600 hover:text-primary">How it Works</a>
+            <a href="/about.html" class="text-sm font-medium text-slate-600 hover:text-primary">About</a>
+            <a href="/reply/" class="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">Get Started</a>
         </div>
     </div>
 </nav>
 
 <!-- HERO -->
-<section class="pt-32 pb-20 bg-slate-50">
-    <div class="text-center max-w-7xl mx-auto px-6">
-        <div class="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 ring-1 mb-6">
-            2025 Professional Email Standards — Updated
-        </div>
-        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-6">
-            Professional email replies, <span class="text-blue-600">ready to copy</span>
+<section class="pt-32 pb-28 bg-gradient-to-b from-blue-50 to-white">
+    <div class="text-center max-w-4xl mx-auto px-6">
+
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
+            Polite emails made <span class="text-primary">effortless</span>
         </h1>
+
         <p class="max-w-2xl mx-auto text-lg text-slate-600 mb-10">
-            Stop overthinking your replies. Use pre-written templates for acknowledgements, apologies, follow-ups, and polite refusals.
+            Get instant professional replies for acknowledgements, apologies, follow-ups, refusals, and workplace communication.
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="/reply/" class="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700">Browse Templates</a>
-            <a href="/reply/say-no.html" class="px-8 py-4 bg-white border border-slate-200 rounded-lg font-semibold hover:bg-slate-50">Most Popular: Saying No</a>
+            <a href="/reply/" class="px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700">
+                Browse Templates
+            </a>
+            <a href="/reply/say-no.html" class="px-8 py-4 bg-white border border-slate-200 rounded-lg font-semibold hover:bg-slate-50">
+                Popular: Saying No
+            </a>
         </div>
+
+        <img src="/logo.svg" class="mx-auto mt-14 opacity-90 h-24" alt="ReplyPolitely Bubble Logo" />
     </div>
 </section>
 
-<!-- TEMPLATE GRID -->
-<section id="templates" class="py-24 bg-white">
+<!-- FEATURE GRID -->
+<section class="py-24">
     <div class="max-w-7xl mx-auto px-6 text-center mb-12">
-        <h2 class="text-3xl font-bold text-slate-900 mb-2">Find the right reply instantly</h2>
-        <p class="text-slate-600">Choose a scenario and get a ready-to-send email response.</p>
+        <h2 class="text-3xl font-bold">Reply better in seconds</h2>
+        <p class="text-slate-600">
+            Choose a scenario. Copy a professional response. Send with confidence.
+        </p>
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid max-w-7xl mx-auto px-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <a href="/reply/ok.html" class="group p-8 border rounded-xl hover:border-blue-300 hover:shadow-lg transition">
-            <h3 class="text-lg font-semibold group-hover:text-blue-700">Confirming Receipt</h3>
-            <p class="text-sm text-slate-500 mt-2">Say “OK” or “Received” professionally.</p>
-        </a>
+        <div class="p-8 border rounded-xl hover:border-primary hover:shadow-lg transition">
+            <div class="text-primary text-3xl mb-4">✔</div>
+            <h3 class="text-lg font-semibold mb-2">Confirm Receipt</h3>
+            <p class="text-sm text-slate-500">Say “OK” or “Received” politely.</p>
+        </div>
 
-        <a href="/reply/say-no.html" class="group p-8 border rounded-xl hover:border-blue-300 hover:shadow-lg transition">
-            <h3 class="text-lg font-semibold group-hover:text-blue-700">Saying No</h3>
-            <p class="text-sm text-slate-500 mt-2">Decline requests while maintaining relationships.</p>
-        </a>
+        <div class="p-8 border rounded-xl hover:border-primary hover:shadow-lg transition">
+            <div class="text-primary text-3xl mb-4">✋</div>
+            <h3 class="text-lg font-semibold mb-2">Saying No</h3>
+            <p class="text-sm text-slate-500">Decline respectfully and professionally.</p>
+        </div>
 
-        <a href="/reply/late-email.html" class="group p-8 border rounded-xl hover:border-blue-300 hover:shadow-lg transition">
-            <h3 class="text-lg font-semibold group-hover:text-blue-700">Late Response</h3>
-            <p class="text-sm text-slate-500 mt-2">Apologize for delayed replies confidently.</p>
-        </a>
+        <div class="p-8 border rounded-xl hover:border-primary hover:shadow-lg transition">
+            <div class="text-primary text-3xl mb-4">⏱</div>
+            <h3 class="text-lg font-semibold mb-2">Late Reply</h3>
+            <p class="text-sm text-slate-500">Apologize without sounding weak.</p>
+        </div>
 
-        <a href="/reply/noted.html" class="group p-8 border rounded-xl hover:border-blue-300 hover:shadow-lg transition">
-            <h3 class="text-lg font-semibold group-hover:text-blue-700">Noted Alternatives</h3>
-            <p class="text-sm text-slate-500 mt-2">Acknowledge without sounding curt.</p>
-        </a>
+        <div class="p-8 border rounded-xl hover:border-primary hover:shadow-lg transition">
+            <div class="text-primary text-3xl mb-4">✉️</div>
+            <h3 class="text-lg font-semibold mb-2">Follow Ups</h3>
+            <p class="text-sm text-slate-500">Nudge politely.</p>
+        </div>
 
-        <a href="/reply/follow-up.html" class="group p-8 border rounded-xl hover:border-blue-300 hover:shadow-lg transition">
-            <h3 class="text-lg font-semibold group-hover:text-blue-700">Follow Up</h3>
-            <p class="text-sm text-slate-500 mt-2">Polite nudges when you need a reply.</p>
-        </a>
+        <div class="p-8 border rounded-xl hover:border-primary hover:shadow-lg transition">
+            <div class="text-primary text-3xl mb-4">📌</div>
+            <h3 class="text-lg font-semibold mb-2">Noted</h3>
+            <p class="text-sm text-slate-500">Acknowledge professionally.</p>
+        </div>
 
-        <a href="/reply/apology.html" class="group p-8 border rounded-xl hover:border-blue-300 hover:shadow-lg transition">
-            <h3 class="text-lg font-semibold group-hover:text-blue-700">Apologies</h3>
-            <p class="text-sm text-slate-500 mt-2">Own mistakes without losing credibility.</p>
-        </a>
+        <div class="p-8 border rounded-xl hover:border-primary hover:shadow-lg transition">
+            <div class="text-primary text-3xl mb-4">🙇</div>
+            <h3 class="text-lg font-semibold mb-2">Apologies</h3>
+            <p class="text-sm text-slate-500">Correct mistakes professionally.</p>
+        </div>
 
     </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section id="how-it-works" class="py-24 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-6 text-center mb-12">
-        <h2 class="text-3xl font-bold">How it works</h2>
+<!-- SOCIAL PROOF -->
+<section class="bg-blue-50 py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-xl font-semibold text-primary mb-4">Used by professionals worldwide</h3>
+        <p class="text-sm text-slate-600">
+            Thousands rely on ReplyPolitely for confident workplace communication.
+        </p>
     </div>
+</section>
 
-    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12 px-6 text-center">
-        <div>
-            <h3 class="font-semibold mb-2">1 — Choose a scenario</h3>
-            <p class="text-slate-600 text-sm">Pick the email situation you are handling.</p>
-        </div>
-        <div>
-            <h3 class="font-semibold mb-2">2 — Copy a response</h3>
-            <p class="text-slate-600 text-sm">Use our curated templates and adjust if needed.</p>
-        </div>
-        <div>
-            <h3 class="font-semibold mb-2">3 — Send confidently</h3>
-            <p class="text-slate-600 text-sm">Paste and send a clear, polite email.</p>
-        </div>
+<!-- CTA -->
+<section class="py-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to reply confidently?</h2>
+        <a href="/reply/" class="px-10 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700">
+            Start browsing templates
+        </a>
     </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-white border-t border-slate-200 py-12">
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+<footer class="bg-slate-900 text-slate-300 py-14">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+
         <div class="md:col-span-2">
-            <a href="/" class="text-xl font-bold text-slate-900">Reply<span class="text-blue-600">Politely</span></a>
-            <p class="mt-4 text-sm text-slate-500 max-w-sm">Professional email replies for modern workplaces.</p>
+            <div class="flex items-center space-x-2 mb-4">
+                <img src="/logo.svg" class="h-7" />
+                <span class="text-xl font-bold">ReplyPolitely</span>
+            </div>
+            <p class="text-sm max-w-sm">
+                Professional email replies for modern workplaces.
+            </p>
         </div>
 
         <div>
-            <h3 class="text-sm font-semibold text-slate-900 uppercase mb-4">Templates</h3>
-            <ul class="space-y-2 text-sm text-slate-600">
-                <li><a href="/reply/ok.html">Confirming Receipt</a></li>
-                <li><a href="/reply/say-no.html">Saying No</a></li>
-                <li><a href="/reply/late-email.html">Late Replies</a></li>
+            <h4 class="text-sm font-semibold text-white mb-3">Templates</h4>
+            <ul class="space-y-2 text-sm">
+                <li><a href="/reply/ok.html">Confirm</a></li>
+                <li><a href="/reply/say-no.html">Decline</a></li>
+                <li><a href="/reply/late-email.html">Late Reply</a></li>
             </ul>
         </div>
 
         <div>
-            <h3 class="text-sm font-semibold text-slate-900 uppercase mb-4">Legal</h3>
-            <ul class="space-y-2 text-sm text-slate-600">
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Service</a></li>
+            <h4 class="text-sm font-semibold text-white mb-3">Legal</h4>
+            <ul class="space-y-2 text-sm">
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/terms.html">Terms</a></li>
                 <li><a href="/disclaimer.html">Disclaimer</a></li>
             </ul>
         </div>
     </div>
-    <div class="mt-10 text-center text-xs text-slate-400">&copy; 2025 ReplyPolitely. All rights reserved.</div>
+
+    <div class="text-center text-xs text-slate-500 mt-10">&copy; 2025 ReplyPolitely — All rights reserved.</div>
 </footer>
 
 </body>
