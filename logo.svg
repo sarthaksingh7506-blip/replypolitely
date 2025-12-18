@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="60" viewBox="0 0 260 60">
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="70" viewBox="0 0 300 70">
   <style>
     .text-blue { fill: #2874f0; font-weight: 700; }
     .text-black { fill: #000000; font-weight: 700; }
-    .font { font-family: Arial, Helvetica, sans-serif; font-size: 30px; }
+    .font { font-family: Arial, Helvetica, sans-serif; font-size: 32px; }
   </style>
 
   <!-- Speech Bubble -->
-  <g transform="translate(5, 6) scale(0.65)">
+  <g transform="translate(10, 12) scale(0.75)">
     <path fill="#2874f0" d="M45 0c25 0 45 18 45 40s-20 40-45 40c-5 0-10-1-15-2l-18 10 5-17C10 65 0 54 0 40 0 18 20 0 45 0z"/>
-    <path fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" d="M30 37l10 10 20-20"/>
+    <path fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" d="M30 37l10 10 20-20"/>
   </g>
 
   <!-- Text -->
-  <text x="95" y="42" class="font text-blue">Reply</text>
-  <text x="168" y="42" class="font text-black">Politely</text>
+  <text x="120" y="48" class="font text-blue">Reply</text>
+  <text x="210" y="48" class="font text-black">Politely</text>
 </svg>
