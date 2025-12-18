@@ -1,17 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="90" viewBox="0 0 420 90">
-  <style>
-    .text-blue { fill: #2874f0; font-weight: 700; }
-    .text-black { fill: #000000; font-weight: 700; }
-    .font { font-family: Arial, Helvetica, sans-serif; font-size: 42px; }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <!-- Transparent background -->
+  <rect width="800" height="300" fill="none"/>
 
-  <!-- Speech Bubble -->
-  <g transform="translate(10, 10)">
-    <path fill="#2874f0" d="M45 0c25 0 45 18 45 40s-20 40-45 40c-5 0-10-1-15-2l-18 10 5-17C10 65 0 54 0 40 0 18 20 0 45 0z"/>
-    <path fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" d="M30 37l10 10 20-20"/>
-  </g>
+  <!-- Chat bubble with tail -->
+  <path d="M140 80
+           a80 80 0 1 1 -20 150
+           l-30 20
+           10 -35
+           a80 80 0 0 1 40 -135z"
+        fill="#2874f0"/>
+
+  <!-- Checkmark -->
+  <path d="M120 155l35 35 55 -55"
+        stroke="#ffffff"
+        stroke-width="14"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
   <!-- Text -->
-  <text x="120" y="58" class="font text-blue">Reply</text>
-  <text x="250" y="58" class="font text-black">Politely</text>
+  <text x="270" y="185" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="95" fill="#2874f0">
+    Reply
+  </text>
+  <text x="470" y="185" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="95" fill="#000000">
+    Politely
+  </text>
 </svg>
