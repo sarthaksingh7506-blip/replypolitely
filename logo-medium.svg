@@ -1,28 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
-  <!-- Transparent background -->
-  <rect width="400" height="120" fill="none"/>
-
-  <!-- Chat bubble with tail -->
-  <path d="M60 20
-           a40 40 0 1 1 -10 75
-           l-18 12
-           6 -20
-           a40 40 0 0 1 22 -67z"
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="160" viewBox="0 0 260 160">
+  <!-- Bubble -->
+  <path d="M60 25
+           a45 45 0 1 1 -12 84
+           l-16 12
+           6 -22
+           a45 45 0 0 1 22 -74z"
         fill="#2874f0"/>
 
-  <!-- Checkmark -->
-  <path d="M50 57l20 20 30 -30"
+  <!-- Check -->
+  <path d="M48 70l24 24 36 -36"
         stroke="#ffffff"
-        stroke-width="7"
+        stroke-width="9"
         fill="none"
         stroke-linecap="round"
         stroke-linejoin="round"/>
 
   <!-- Text -->
-  <text x="120" y="75" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="45" fill="#2874f0">
+  <text x="115" y="80" font-family="Arial, Helvetica, sans-serif"
+        font-weight="700" font-size="42" fill="#2874f0">
     Reply
   </text>
-  <text x="235" y="75" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="45" fill="#000000">
+  <text x="115" y="125" font-family="Arial, Helvetica, sans-serif"
+        font-weight="700" font-size="42" fill="#000000">
     Politely
   </text>
 </svg>
