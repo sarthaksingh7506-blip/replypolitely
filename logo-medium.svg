@@ -1,17 +1,14 @@
-<svg width="480" height="140" viewBox="0 0 480 140" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .text-blue { fill: #2874f0; font-weight: 700; }
-    .text-black { fill: #000000; font-weight: 700; }
-    .font { font-family: Arial, Helvetica, sans-serif; font-size: 60px; }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="200" viewBox="0 0 700 200">
+  <!-- Background for spacing (transparent) -->
+  <rect width="700" height="200" fill="none"/>
 
-  <!-- Speech Bubble Icon -->
-  <g transform="translate(15, 25)">
-    <circle cx="55" cy="45" r="45" fill="#2874f0"/>
-    <path d="M35 50l15 15 25-25" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Icon -->
+  <g transform="translate(30, 40)">
+    <circle cx="60" cy="60" r="60" fill="#2874f0"/>
+    <path d="M35 65l25 25 40-40" stroke="#ffffff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
   <!-- Text -->
-  <text x="130" y="80" class="font text-blue">Reply</text>
-  <text x="270" y="80" class="font text-black">Politely</text>
+  <text x="170" y="105" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="80" fill="#2874f0">Reply</text>
+  <text x="380" y="105" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="80" fill="#000000">Politely</text>
 </svg>
