@@ -1,0 +1,6 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue speech bubble -->
+  <circle cx="128" cy="128" r="110" fill="#2874f0"/>
+  <!-- Checkmark -->
+  <path d="M85 128l30 30 56-56" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
