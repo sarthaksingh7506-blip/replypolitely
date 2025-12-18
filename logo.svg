@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="350" viewBox="0 0 700 350">
   <!-- Transparent background -->
-  <rect width="800" height="300" fill="none"/>
+  <rect width="700" height="350" fill="none"/>
 
   <!-- Chat bubble with tail -->
-  <path d="M140 80
+  <path d="M140 100
            a80 80 0 1 1 -20 150
            l-30 20
            10 -35
@@ -11,18 +11,28 @@
         fill="#2874f0"/>
 
   <!-- Checkmark -->
-  <path d="M120 155l35 35 55 -55"
+  <path d="M120 175l35 35 55 -55"
         stroke="#ffffff"
         stroke-width="14"
         fill="none"
         stroke-linecap="round"
         stroke-linejoin="round"/>
 
-  <!-- Text -->
-  <text x="270" y="185" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="95" fill="#2874f0">
+  <!-- Reply (blue) -->
+  <text x="260" y="165"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="700"
+        font-size="95"
+        fill="#2874f0">
     Reply
   </text>
-  <text x="470" y="185" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="95" fill="#000000">
+
+  <!-- Politely (black) -->
+  <text x="260" y="255"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="700"
+        font-size="95"
+        fill="#000000">
     Politely
   </text>
 </svg>
