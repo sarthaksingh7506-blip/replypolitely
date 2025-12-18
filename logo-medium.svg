@@ -1,14 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="200" viewBox="0 0 700 200">
-  <!-- Background for spacing (transparent) -->
-  <rect width="700" height="200" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="240" viewBox="0 0 1100 240">
+  <!-- Transparent background -->
+  <rect width="1100" height="240" fill="none"/>
 
-  <!-- Icon -->
-  <g transform="translate(30, 40)">
-    <circle cx="60" cy="60" r="60" fill="#2874f0"/>
-    <path d="M35 65l25 25 40-40" stroke="#ffffff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <!-- Chat bubble with tail -->
+  <path d="M140 40
+           a80 80 0 1 1 -20 150
+           l-30 20
+           10 -35
+           a80 80 0 0 1 40 -135z"
+        fill="#2874f0"/>
+
+  <!-- Checkmark -->
+  <path d="M120 115l35 35 55 -55"
+        stroke="#ffffff"
+        stroke-width="14"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
   <!-- Text -->
-  <text x="170" y="105" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="80" fill="#2874f0">Reply</text>
-  <text x="380" y="105" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="80" fill="#000000">Politely</text>
+  <text x="300" y="140" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="95" fill="#2874f0">
+    Reply
+  </text>
+
+  <text x="590" y="140" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="95" fill="#000000">
+    Politely
+  </text>
 </svg>
