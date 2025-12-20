@@ -3,410 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReplyPolitely | Professional Workplace Email Templates</title>
-    
-    <meta name="description" content="Copy-paste ready professional email templates. Write better emails, faster.">
+    <title>ReplyPolitely.site | Professional Workplace Email Templates</title>
+
+    <meta name="description" content="Professional email templates for 'Well Received', 'As Discussed', 'Per Our Conversation', 'OK', 'Received', and more. Copy-paste ready for workplace communication.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://replypolitely.com/">
-    
+    <link rel="canonical" href="https://replypolitely.site/">
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        primary: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#1e3a8a',
-                        },
-                        slate: {
-                            850: '#1e293b',
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e'
                         }
-                    },
-                    boxShadow: {
-                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-                        'glow': '0 0 15px rgba(37, 99, 235, 0.15)',
                     }
                 }
             }
         }
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://replypolitely.site/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://replypolitely.site/reply/index.html?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 
-<body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
 
-    <!-- NAVIGATION -->
     <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center gap-2.5">
-                        <img src="/logo.svg" alt="Logo" class="h-8 w-8 rounded-lg bg-primary-50 text-primary-600 p-1" onerror="this.style.display='none';">
-                        <span class="font-bold text-lg tracking-tight text-slate-900">ReplyPolitely</span>
-                    </a>
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="/" class="font-bold text-lg text-slate-900 tracking-tight flex items-center gap-2">
+                <span class="bg-brand-600 text-white rounded px-2 py-0.5 text-sm">RP</span>
+                ReplyPolitely
+            </a>
 
-                    <div class="hidden md:flex ml-10 space-x-1">
-                        <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-900 bg-slate-50 rounded-md">Home</a>
-                        <a href="/reply/index.html" class="px-3 py-2 text-sm font-medium text-slate-500 hover:text-primary-600 hover:bg-slate-50 rounded-md transition-colors">Templates</a>
-                        <a href="about.html" class="px-3 py-2 text-sm font-medium text-slate-500 hover:text-primary-600 hover:bg-slate-50 rounded-md transition-colors">About</a>
-                    </div>
-                </div>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="/reply/index.html" class="text-slate-600 hover:text-brand-600">Templates</a>
+                <a href="/about.html" class="text-slate-600 hover:text-brand-600">About</a>
+            </div>
+        </div>
     </nav>
 
-                <!-- DESKTOP SEARCH -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <form action="/reply/index.html" class="relative">
-                        <input type="text" name="search" placeholder="Search templates..." 
-                        class="w-64 pl-9 pr-4 py-2 text-sm bg-slate-100 border border-slate-200 rounded-full text-slate-900 placeholder-slate-500 focus:ring-2 focus:ring-primary-500 focus:bg-white shadow-soft transition-all">
-                        <svg class="w-4 h-4 text-slate-500 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </form>
-                </div>
-                <!-- HERO SECTION -->
     <main class="flex-grow">
-        <section class="relative bg-white pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                
-                <div class="inline-flex items-center px-3 py-1 rounded-full border border-primary-100 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wide mb-8">
-                    Free Workplace Email Tools
-                </div>
-
-                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-6">
-                    Write professional emails <br class="hidden md:block">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600">without overthinking.</span>
+        <section class="bg-white pt-20 pb-24 border-b border-slate-200 text-center">
+            <div class="max-w-4xl mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                    Professional replies for <br>
+                    <span class="text-brand-600">every workplace scenario.</span>
                 </h1>
 
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500 mb-10">
-                    Easy copy-paste templates for real workplace situations. Polite, clear, and professional — every time.
+                <p class="text-lg text-slate-500 mb-10">
+                    Find templates for “OK”, “Received”, “Thanks”, “As Discussed”, and more. Stop overthinking, reply confidently.
                 </p>
 
-                <div class="max-w-2xl mx-auto relative mb-8 group">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-200"></div>
-
-                    <form action="/reply/index.html" class="relative bg-white rounded-xl shadow-lg flex items-center p-2 border border-slate-100">
-                        <svg class="w-6 h-6 text-slate-400 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-
-                        <input type="text" name="search" placeholder="Try: OK • Received • As discussed" 
-                        class="w-full p-4 text-lg bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400">
-
-                        <button type="submit" class="hidden sm:block bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-600 transition-colors">
-                            Search Templates
-                        </button>
-                    </form>
-                </div>
-
-                <div class="flex flex-wrap justify-center gap-2 text-sm text-slate-600">
-                    <span class="text-slate-400">Popular:</span>
-                    <a href="/reply/ok.html" class="hover:text-primary-600 hover:underline">Reply to OK</a>
-                    <span class="text-slate-300">•</span>
-                    <a href="/reply/received.html" class="hover:text-primary-600 hover:underline">Reply Received</a>
-                    <span class="text-slate-300">•</span>
-                    <a href="/reply/as-discussed.html" class="hover:text-primary-600 hover:underline">As Discussed</a>
-                </div>
-            </div>
-            
-            <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
-        </section>
-        <!-- BROWSE LIBRARY -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8">Browse Library</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-                <!-- TRENDING -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-primary-200 transition-all duration-200">
-                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-4">Trending Now</h3>
-                    <ul class="space-y-3">
-
-                        <li>
-                            <a href="/reply/ok.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
-                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </path>
-                                </svg>
-                                How to Reply to “OK” Professionally
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/reply/received.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
-                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </path>
-                                </svg>
-                                How to Reply to “Received” Professionally
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/reply/per-our-conversation.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
-                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </path>
-                                </svg>
-                                How to Reply to “Per Our Conversation”
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/reply/thanks.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
-                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                </path>
-                                </svg>
-                                How to Reply to “Thanks” Professionally
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- HIGH-INTENT CATEGORIES -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8">Popular Professional Replies</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                <!-- OK / RECEIVED / THANKS -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-primary-200 transition-all">
-                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-50 text-blue-600 mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-4">Short Professional Replies</h3>
-                    <ul class="space-y-3">
-                        <li><a href="/reply/ok.html" class="hover:text-primary-600">How to Reply to “OK” Professionally</a></li>
-                        <li><a href="/reply/received.html" class="hover:text-primary-600">How to Reply to “Received” Professionally</a></li>
-                        <li><a href="/reply/thanks.html" class="hover:text-primary-600">How to Reply to “Thanks” Professionally</a></li>
-                        <li><a href="/reply/well-received.html" class="hover:text-primary-600">How to Reply to “Well Received”</a></li>
-                    </ul>
-                </div>
-
-                <!-- AS DISCUSSED / AS PER YOUR REQUEST / PER OUR CONVERSATION -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-indigo-200 transition-all">
-                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-4">Clarifying Emails</h3>
-                    <ul class="space-y-3">
-                        <li><a href="/reply/as-discussed.html" class="hover:text-indigo-600">How to Reply to “As Discussed”</a></li>
-                        <li><a href="/reply/as-per-your-request.html" class="hover:text-indigo-600">How to Reply to “As Per Your Request”</a></li>
-                        <li><a href="/reply/per-our-conversation.html" class="hover:text-indigo-600">How to Reply to “Per Our Conversation”</a></li>
-                        <li><a href="/reply/noted.html" class="hover:text-indigo-600">How to Reply to “Noted” Professionally</a></li>
-                    </ul>
-                </div>
-
-                <!-- LATE EMAIL / MEETING RESCHEDULE / FOLLOW-UP / NO RESPONSE / SAY NO -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-red-200 transition-all">
-                    <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-red-50 text-red-600 mb-4">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-4">Difficult Conversations</h3>
-                    <ul class="space-y-3">
-                        <li><a href="/reply/late-email.html" class="hover:text-red-600">Professional Late Email Apology</a></li>
-                        <li><a href="/reply/meeting-reschedule.html" class="hover:text-red-600">How to Reschedule a Meeting Politely</a></li>
-                        <li><a href="/reply/seen.html" class="hover:text-red-600">How to Reply to “Seen” Professionally</a></li>
-                        <li><a href="/reply/no-response.html" class="hover:text-red-600">Follow Up When No Response</a></li>
-                        <li><a href="/reply/say-no.html" class="hover:text-red-600">How to Say No Politely</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="mt-12 text-center">
-                <a href="/reply/index.html" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-100 text-primary-700 hover:bg-primary-200 transition-colors">
-                    View All Templates
-                </a>
+                <form action="/reply/index.html" method="GET" class="max-w-xl mx-auto relative">
+                    <input type="text" name="search" placeholder="Search templates (e.g., 'OK', 'Received')" 
+                        class="w-full pl-5 pr-12 py-4 rounded-xl border border-slate-300 shadow-sm focus:border-brand-600 focus:ring-1 focus:ring-brand-600 outline-none transition">
+                    <button type="submit" class="absolute right-2 top-2 bottom-2 bg-brand-600 text-white px-4 rounded-lg font-medium hover:bg-brand-700">
+                        Search
+                    </button>
+                </form>
             </div>
         </section>
-        <!-- CALL TO ACTION -->
-        <section class="max-w-3xl mx-auto text-center py-12">
-            <h2 class="text-3xl font-bold text-slate-900 mb-4">
-                Not sure what to write?
-            </h2>
-            <p class="text-slate-600 text-lg mb-8">
-                Browse our complete library of professional email replies for any workplace situation.
-            </p>
 
-            <div class="flex flex-wrap justify-center gap-4">
-
-                <a href="/reply/index.html" 
-                    class="px-6 py-3 rounded-lg bg-slate-900 text-white font-medium hover:bg-primary-600 transition-colors">
-                    Browse All Templates
-                </a>
-
-                <a href="/reply/index.html?sort=popular" 
-                    class="px-6 py-3 rounded-lg bg-primary-100 text-primary-700 font-medium hover:bg-primary-200 transition-colors">
-                    Most Popular Replies
-                </a>
-
-                <a href="/reply/index.html?search=ok" 
-                    class="px-6 py-3 rounded-lg bg-white border border-slate-200 text-slate-700 font-medium hover:border-primary-200 hover:text-primary-600 transition-colors">
-                    Search “OK” Replies
-                </a>
-
+        <section class="max-w-7xl mx-auto px-4 py-16">
+            <div class="flex justify-between items-end mb-8">
+                <h2 class="text-2xl font-bold text-slate-900">Explore Categories</h2>
+                <a href="/reply/index.html" class="text-brand-600 font-medium hover:underline text-sm">Browse all templates →</a>
             </div>
 
-            <p class="mt-8 text-sm text-slate-500">
-                Updated weekly with new templates based on real workplace communication trends.
-            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Trending -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <h3 class="font-bold text-lg text-slate-800 mb-4">Trending Phrases</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/reply/ok.html" class="text-slate-600 hover:text-brand-600">Reply to “OK” Professionally</a></li>
+                        <li><a href="/reply/received.html" class="text-slate-600 hover:text-brand-600">Reply to “Received” Professionally</a></li>
+                        <li><a href="/reply/thanks.html" class="text-slate-600 hover:text-brand-600">Reply to “Thanks” Professionally</a></li>
+                    </ul>
+                </div>
+
+                <!-- Challenging -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <h3 class="font-bold text-lg text-slate-800 mb-4">Difficult Conversations</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/reply/as-discussed.html" class="text-slate-600 hover:text-brand-600">Reply to “As Discussed”</a></li>
+                        <li><a href="/reply/per-our-conversation.html" class="text-slate-600 hover:text-brand-600">Reply to “Per Our Conversation”</a></li>
+                        <li><a href="/reply/decline-meeting.html" class="text-slate-600 hover:text-brand-600">Decline Meeting Request</a></li>
+                    </ul>
+                </div>
+
+                <!-- Administrative -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <h3 class="font-bold text-lg text-slate-800 mb-4">Administrative</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/reply/noted.html" class="text-slate-600 hover:text-brand-600">Reply to “Noted”</a></li>
+                        <li><a href="/reply/approved.html" class="text-slate-600 hover:text-brand-600">Reply to “Approved”</a></li>
+                        <li><a href="/reply/well-received.html" class="text-slate-600 hover:text-brand-600">Reply to “Well Received”</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </section>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-    <!-- TRENDING -->
-    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-primary-200 transition-all duration-200">
-        <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-4">Trending Now</h3>
-        <ul class="space-y-3">
-            <li><a href="/reply/ok.html" class="hover:text-primary-600">How to Reply to “OK” Professionally</a></li>
-            <li><a href="/reply/received.html" class="hover:text-primary-600">How to Reply to “Received” Professionally</a></li>
-            <li><a href="/reply/thanks.html" class="hover:text-primary-600">How to Reply to “Thanks” Professionally</a></li>
-            <li><a href="/reply/apology.html" class="hover:text-primary-600">How to Write a Professional Apology Email</a></li>
-        </ul>
-    </div>
-
-    <!-- DIFFICULT CONVERSATIONS -->
-    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-red-200 transition-all duration-200">
-        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-red-600 mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856"></path></svg>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-4">Difficult Conversations</h3>
-        <ul class="space-y-3">
-            <li><a href="/reply/per-our-conversation.html" class="hover:text-red-600">How to Reply to “Per Our Conversation”</a></li>
-            <li><a href="/reply/as-discussed.html" class="hover:text-red-600">How to Reply to “As Discussed”</a></li>
-            <li><a href="/reply/seen.html" class="hover:text-red-600">How to Reply to “Seen” Professionally</a></li>
-            <li><a href="/reply/no-politely.html" class="hover:text-red-600">How to Say No Politely in an Email</a></li>
-        </ul>
-    </div>
-
-    <!-- ADMINISTRATIVE -->
-    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200">
-        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-gray-600 mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6"/></svg>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-4">Administrative</h3>
-        <ul class="space-y-3">
-            <li><a href="/reply/well-received.html" class="hover:text-primary-600">How to Reply to “Well Received”</a></li>
-            <li><a href="/reply/approved.html" class="hover:text-primary-600">How to Reply to “Approved”</a></li>
-            <li><a href="/reply/reschedule-meeting.html" class="hover:text-primary-600">How to Reschedule a Meeting Politely</a></li>
-            <li><a href="/reply/follow-up.html" class="hover:text-primary-600">Professional Follow-Up Email Sample</a></li>
-        </ul>
-    </div>
-
-    <!-- FORMAL & HR -->
-    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-indigo-200 transition-all duration-200">
-        <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4 4 0 017 17h10"/></svg>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-4">Formal & HR</h3>
-        <ul class="space-y-3">
-            <li><a href="/reply/late-email-apology.html" class="hover:text-indigo-600">How to Apologize for a Late Email</a></li>
-            <li><a href="/reply/no-response-follow-up.html" class="hover:text-indigo-600">Follow-Up When Someone Doesn’t Reply</a></li>
-            <li><a href="/reply/polite-follow-up.html" class="hover:text-indigo-600">How to Write a Polite Follow-Up Email</a></li>
-            <li><a href="/reply/per-request.html" class="hover:text-indigo-600">How to Reply to “As Per Your Request”</a></li>
-        </ul>
-    </div>
-
-        </div>
-        <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-200 pt-16 pb-8 mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-
-                <!-- Brand -->
-                <div class="col-span-2 md:col-span-1">
-                    <span class="font-bold text-xl text-slate-900">ReplyPolitely</span>
-                    <p class="mt-4 text-sm text-slate-500 leading-relaxed">
-                        Professional workplace email templates to communicate clearly and confidently.
-                    </p>
-                </div>
-
-                <!-- Templates -->
-                <div>
-                    <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Templates</h3>
-                    <ul class="space-y-3">
-                        <li><a href="/reply/index.html?sort=popular" class="text-sm text-slate-500 hover:text-primary-600">Popular Templates</a></li>
-                        <li><a href="/reply/index.html?sort=new" class="text-sm text-slate-500 hover:text-primary-600">New Templates</a></li>
-                        <li><a href="/reply/index.html" class="text-sm text-slate-500 hover:text-primary-600">Browse All</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company -->
-                <div>
-                    <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Company</h3>
-                    <ul class="space-y-3">
-                        <li><a href="/about.html" class="text-sm text-slate-500 hover:text-primary-600">About</a></li>
-                        <li><a href="/contact.html" class="text-sm text-slate-500 hover:text-primary-600">Contact</a></li>
-                        <li><a href="/disclaimer.html" class="text-sm text-slate-500 hover:text-primary-600">Disclaimer</a></li>
-                    </ul>
-                </div>
-
-                <!-- Legal -->
-                <div>
-                    <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Legal</h3>
-                    <ul class="space-y-3">
-                        <li><a href="/privacy.html" class="text-sm text-slate-500 hover:text-primary-600">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="text-sm text-slate-500 hover:text-primary-600">Terms of Service</a></li>
-                        <li><a href="/disclaimer.html" class="text-sm text-slate-500 hover:text-primary-600">Disclaimer</a></li>
-                    </ul>
-                </div>
-
-                <!-- Tools -->
-                <div>
-                    <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Tools</h3>
-                    <ul class="space-y-3">
-                        <li><a href="/reply/index.html?search=" class="text-sm text-slate-500 hover:text-primary-600">Search Templates</a></li>
-                        <li><a href="/reply/index.html" class="text-sm text-slate-500 hover:text-primary-600">Categories</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="border-t border-slate-100 pt-8 text-center">
-                <p class="text-sm text-slate-400">&copy; 2025 ReplyPolitely. All rights reserved.</p>
-            </div>
-
-        </div>
-    </footer>
     </main>
 
-    <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        if (btn && menu) {
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-        }
-    </script>
+    <footer class="bg-white border-t border-slate-200 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+            <div>&copy; 2025 ReplyPolitely.site. All rights reserved.</div>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="/terms.html" class="hover:text-slate-900">Terms</a>
+                <a href="/privacy.html" class="hover:text-slate-900">Privacy</a>
+                <a href="/disclaimer.html" class="hover:text-slate-900">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
-            </html>
+</html>
