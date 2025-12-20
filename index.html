@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ReplyPolitely | Professional Workplace Email Templates</title>
 
+    <!-- Meta Description -->
     <meta name="description" content="Copy-paste ready professional email templates. Write better emails, faster.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://replypolitely.com/">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -35,143 +42,417 @@
                         }
                     },
                     boxShadow: {
-                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-                        'glow': '0 0 15px rgba(37, 99, 235, 0.15)',
+                        'soft': '0 4px 20px -2px rgba(0,0,0,0.05)',
+                        'glow': '0 0 15px rgba(37,99,235,0.15)',
                     }
                 }
             }
         }
     </script>
+
 </head>
 
 <body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen">
 
-    <!-- NAVBAR -->
+    <!-- NAVIGATION -->
     <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="flex justify-between h-16">
+
                 <div class="flex items-center">
+
                     <a href="index.html" class="flex items-center gap-2.5">
-                        <img src="/logo.svg" alt="Logo" class="h-8 w-8" onerror="this.style.display='none';">
+                        <img src="/logo.svg" alt="Logo" class="h-8 w-8 rounded-lg bg-primary-50 text-primary-600 p-1" onerror="this.style.display='none';">
                         <span class="font-bold text-lg tracking-tight text-slate-900">ReplyPolitely</span>
                     </a>
 
                     <div class="hidden md:flex ml-10 space-x-1">
                         <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-900 bg-slate-50 rounded-md">Home</a>
-                        <a href="/reply/index.html" class="px-3 py-2 text-sm font-medium text-slate-500 hover:text-primary-600 transition">Templates</a>
-                        <a href="library.html" class="px-3 py-2 text-sm font-medium text-slate-500 hover:text-primary-600 transition">Library</a>
-                        <a href="about.html" class="px-3 py-2 text-sm font-medium text-slate-500 hover:text-primary-600 transition">About</a>
+
+                        <a href="/reply/index.html" class="px-3 py-2 text-sm font-medium text-slate-500 hover:text-primary-600 hover:bg-slate-50 rounded-md transition-colors">Templates</a>
+
+                        <!-- Added Library -->
+                        <a href="/reply/index.html?cat=all" class="px-3 py-2 text-sm font-medium text-slate-500 hover:text-primary-600 hover:bg-slate-50 rounded-md transition-colors">
+                            Library
+                        </a>
+
+                        <a href="about.html" class="px-3 py-2 text-sm font-medium text-slate-500 hover:text-primary-600 hover:bg-slate-50 rounded-md transition-colors">About</a>
                     </div>
+
                 </div>
 
+                <!-- Desktop Search -->
                 <div class="hidden md:flex items-center space-x-4">
+
                     <form action="/reply/index.html" class="relative">
-                        <input type="text" name="search" placeholder="Quick search..."
-                            class="w-64 pl-9 pr-4 py-1.5 text-sm bg-slate-100 rounded-full focus:ring-2 focus:ring-primary-500">
-                        <svg class="w-4 h-4 text-slate-500 absolute left-3 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0114 0z"/></svg>
+                        <input 
+                            type="text" 
+                            name="search" 
+                            placeholder="Search templates…" 
+                            class="w-64 pl-9 pr-4 py-1.5 text-sm bg-white border border-slate-300 rounded-full text-slate-900 placeholder-slate-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all">
+
+                        <svg class="w-4 h-4 text-slate-500 absolute left-3 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </form>
+
+                </div>
+
+                <!-- MOBILE NAV BUTTON -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+
+            <div class="px-2 pt-2 pb-3 space-y-1">
+
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary-600 bg-primary-50">Home</a>
+
+                <a href="/reply/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Templates</a>
+
+                <a href="/reply/index.html?cat=all" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Library</a>
+
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">About</a>
+
+                <!-- Improved mobile search -->
+                <div class="px-3 py-2">
+                    <form action="/reply/index.html" class="relative">
+                        <input 
+                            type="text" 
+                            name="search" 
+                            placeholder="Search…" 
+                            class="w-full pl-9 pr-4 py-2 text-sm bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500">
+
+                        <svg class="w-4 h-4 text-slate-500 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
                     </form>
                 </div>
 
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
             </div>
+
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
-            <a href="index.html" class="block px-3 py-2 text-primary-600">Home</a>
-            <a href="/reply/index.html" class="block px-3 py-2 text-slate-600">Templates</a>
-            <a href="library.html" class="block px-3 py-2 text-slate-600">Library</a>
-            <a href="about.html" class="block px-3 py-2 text-slate-600">About</a>
-            <a href="privacy.html" class="block px-3 py-2 text-slate-600">Privacy</a>
-            <a href="disclaimer.html" class="block px-3 py-2 text-slate-600">Disclaimer</a>
-        </div>
     </nav>
 
-    <!-- HERO -->
+
+
+
+
+    <!-- HERO SECTION -->
     <main class="flex-grow">
-        <section class="bg-white pt-16 pb-20 text-center">
 
-            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
-                Find the perfect words<br>
-                <span class="text-primary-600">for difficult emails.</span>
-            </h1>
+        <section class="relative bg-white pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
 
-            <p class="max-w-2xl mx-auto text-lg text-slate-500 mb-10">
-                Professional, polite, and firm templates for the modern workplace.
-            </p>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
 
-            <!-- FIXED SEARCH BAR (Mobile + Desktop) -->
-            <div class="max-w-2xl mx-auto mb-8">
-                <form action="/reply/index.html"
-                      class="bg-white rounded-lg border border-slate-200 shadow-soft flex items-center gap-3 px-4 py-2 focus-within:border-primary-600 focus-within:shadow-glow">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-primary-100 bg-primary-50 text-primary-700 text-xs font-semibold uppercase tracking-wide mb-8">
+                    Free Workplace Email Tools
+                </div>
 
-                    <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                    </svg>
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-6">
+                    Find the perfect words <br class="hidden md:block">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600">for difficult emails.</span>
+                </h1>
 
-                    <input type="text" name="search"
-                           class="w-full bg-transparent border-none focus:ring-0 text-base placeholder-slate-400"
-                           placeholder="Search templates…" autocomplete="off">
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500 mb-10">
+                    Professional, polite, and firm templates for the modern workplace. Copy, paste, and hit send with confidence.
+                </p>
 
-                    <button type="submit"
-                            class="hidden sm:block bg-primary-600 text-white px-6 py-2 text-sm hover:bg-primary-700">
-                        Search
-                    </button>
-                </form>
+                <!-- Search Box -->
+                <div class="max-w-2xl mx-auto relative mb-8 group">
+
+                    <div class="absolute -inset-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-200"></div>
+
+                    <form action="/reply/index.html" class="relative bg-white rounded-xl shadow-lg flex items-center p-2 border border-slate-200">
+
+                        <svg class="w-6 h-6 text-slate-400 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+
+                        <input 
+                            type="text" 
+                            name="search"
+                            placeholder="What do you need to write? (e.g. 'Resignation')" 
+                            class="w-full p-4 text-lg bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-500">
+
+                        <button type="submit" class="hidden sm:block bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-600 transition-colors">
+                            Find Template
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <!-- Popular links -->
+                <div class="flex flex-wrap justify-center gap-2 text-sm text-slate-600">
+
+                    <span class="text-slate-400">Popular:</span>
+
+                    <a href="/reply/resignation.html" class="hover:text-primary-600 hover:underline">Resignation</a>
+                    <span class="text-slate-300">•</span>
+
+                    <a href="/reply/decline-meeting.html" class="hover:text-primary-600 hover:underline">Decline Meeting</a>
+                    <span class="text-slate-300">•</span>
+
+                    <a href="/reply/ask-for-raise.html" class="hover:text-primary-600 hover:underline">Ask for Raise</a>
+
+                </div>
+
             </div>
+
+            <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+
         </section>
 
-        <!-- BROWSE (unchanged except title updated) -->
-        <section class="max-w-7xl mx-auto px-4 py-16">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8">Library</h2>
 
-            <!-- your three-column cards unchanged -->
-            <!-- (content omitted for brevity but preserved exactly) -->
+
+
+        <!-- LIBRARY SECTION -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+            <h2 class="text-2xl font-bold text-slate-900 mb-8">Browse Library</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Trending -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-primary-200 transition-all duration-200">
+
+                    <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Trending Now</h3>
+
+                    <ul class="space-y-3">
+
+                        <li>
+                            <a href="/reply/sick-leave.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Sick Leave Notification
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/reply/introduction.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Intro to Client
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/reply/follow-up.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Gentle Follow Up
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Difficult Conversations -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-red-200 transition-all duration-200">
+
+                    <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-red-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Difficult Conversations</h3>
+
+                    <ul class="space-y-3">
+
+                        <li>
+                            <a href="/reply/missed-deadline.html" class="flex items-center text-slate-600 hover:text-red-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Missed Deadline Apology
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/reply/decline-offer.html" class="flex items-center text-slate-600 hover:text-red-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Decline Job Offer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/reply/complaint-response.html" class="flex items-center text-slate-600 hover:text-red-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Complaint Response
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- Administrative -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200">
+
+                    <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-gray-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Administrative</h3>
+
+                    <ul class="space-y-3">
+
+                        <li>
+                            <a href="/reply/meeting-agenda.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Send Meeting Agenda
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/reply/password-reset.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Password Reset Request
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/reply/vacation-handover.html" class="flex items-center text-slate-600 hover:text-primary-600 group">
+                                <svg class="w-4 h-4 mr-2 text-slate-400 group-hover:text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                Vacation Handover
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="/reply/index.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-primary-700 bg-primary-100 hover:bg-primary-200 transition-colors">
+                    View All 50+ Templates
+                </a>
+            </div>
+
         </section>
+
     </main>
+
+
+
 
     <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-                <div>
+
+
+                <div class="col-span-2 md:col-span-1">
                     <span class="font-bold text-xl text-slate-900">ReplyPolitely</span>
-                    <p class="mt-4 text-sm text-slate-500">Helping professionals communicate since 2025.</p>
+
+                    <p class="mt-4 text-sm text-slate-500 leading-relaxed">
+                        Helping professionals communicate with clarity and confidence since 2025.
+                    </p>
                 </div>
+
+
                 <div>
-                    <h3 class="text-sm font-semibold text-slate-900 uppercase mb-4">Templates</h3>
-                    <a href="/reply/index.html" class="block text-slate-500 hover:text-primary-600 text-sm">Most Popular</a>
-                    <a href="/reply/index.html?sort=new" class="block text-slate-500 hover:text-primary-600 text-sm">New Additions</a>
+                    <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Templates</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/reply/index.html?sort=popular" class="text-sm text-slate-500 hover:text-primary-600">Most Popular</a></li>
+                        <li><a href="/reply/index.html?sort=new" class="text-sm text-slate-500 hover:text-primary-600">New Additions</a></li>
+                    </ul>
                 </div>
+
+
                 <div>
-                    <h3 class="text-sm font-semibold text-slate-900 uppercase mb-4">Company</h3>
-                    <a href="about.html" class="block text-slate-500 hover:text-primary-600 text-sm">About</a>
-                    <a href="contact.html" class="block text-slate-500 hover:text-primary-600 text-sm">Contact</a>
+                    <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-sm text-slate-500 hover:text-primary-600">About</a></li>
+                        <li><a href="contact.html" class="text-sm text-slate-500 hover:text-primary-600">Contact</a></li>
+                    </ul>
                 </div>
+
+
                 <div>
-                    <h3 class="text-sm font-semibold text-slate-900 uppercase mb-4">Legal</h3>
-                    <a href="privacy.html" class="block text-slate-500 hover:text-primary-600 text-sm">Privacy</a>
-                    <a href="terms.html" class="block text-slate-500 hover:text-primary-600 text-sm">Terms</a>
-                    <a href="disclaimer.html" class="block text-slate-500 hover:text-primary-600 text-sm">Disclaimer</a>
+                    <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="privacy.html" class="text-sm text-slate-500 hover:text-primary-600">Privacy</a></li>
+                        <li><a href="terms.html" class="text-sm text-slate-500 hover:text-primary-600">Terms</a></li>
+
+                        <!-- Added Disclaimer -->
+                        <li><a href="disclaimer.html" class="text-sm text-slate-500 hover:text-primary-600">Disclaimer</a></li>
+                    </ul>
                 </div>
+
+
             </div>
 
             <div class="border-t border-slate-100 pt-8 text-center">
                 <p class="text-sm text-slate-400">&copy; 2025 ReplyPolitely. All rights reserved.</p>
             </div>
+
         </div>
+
     </footer>
 
+
+
+    <!-- MOBILE MENU SCRIPT -->
     <script>
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
         });
     </script>
 
+
 </body>
-</html>
+    </html>
