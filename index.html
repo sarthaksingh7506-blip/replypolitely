@@ -1,160 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ReplyPolitely | Professional Email Templates</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- SEO -->
+    <meta name="description"
+        content="ReplyPolitely provides professional, authoritative email templates for workplace communication. Copy-paste ready templates for difficult conversations, administrative tasks, and daily business correspondence.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://replypolitely.site/">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ReplyPolitely | Professional Email Templates">
+    <meta property="og:description"
+        content="Corporate-ready email templates for workplace communication. Confident, neutral, and ready to copy.">
+    <meta property="og:url" content="https://replypolitely.site/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/logo.svg">
 
-<style>
-* { border-radius:0; }
-</style>
+    <title>ReplyPolitely | Professional Email Templates for the Workplace</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1e3a8a',
+                            900: '#172554',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        input,
+        button,
+        a,
+        div,
+        span {
+            border-radius: 0 !important;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
 </head>
-<body class="antialiased font-sans text-gray-800">
 
-<!-- HEADER -->
-<header class="border-b">
-  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+<body class="bg-gray-50 text-gray-900 font-sans flex flex-col min-h-screen">
 
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="logo.svg" class="w-8 h-8" alt="ReplyPolitely Logo">
-      <span class="font-bold text-lg">ReplyPolitely</span>
-    </a>
+    <!-- HEADER -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="/logo.svg" alt="ReplyPolitely Logo" class="h-8 w-8">
+                        <span class="font-bold text-xl text-navy-900 ml-2">ReplyPolitely</span>
+                    </a>
+                </div>
 
-    <button id="menu-btn" class="md:hidden">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-    </button>
+                <nav class="hidden sm:flex sm:space-x-8 items-center">
+                    <a href="index.html"
+                        class="border-b-2 border-navy-900 inline-flex px-1 pt-1 text-sm font-medium text-gray-900 h-full">Home</a>
+                    <a href="reply/index.html"
+                        class="border-b-2 border-transparent inline-flex px-1 pt-1 text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 h-full">Templates</a>
+                    <a href="about.html"
+                        class="border-b-2 border-transparent inline-flex px-1 pt-1 text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 h-full">About</a>
+                    <a href="privacy.html"
+                        class="border-b-2 border-transparent inline-flex px-1 pt-1 text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 h-full">Privacy</a>
+                    <a href="terms.html"
+                        class="border-b-2 border-transparent inline-flex px-1 pt-1 text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300 h-full">Terms</a>
+                </nav>
 
-    <nav class="hidden md:flex gap-6 text-sm font-medium">
-      <a href="reply/index.html">Templates</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
+                <button id="mobile-menu-btn" class="sm:hidden inline-flex items-center p-2 text-gray-500"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor">
+                        <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
 
-  </div>
+        <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-200">
+            <nav class="p-4 space-y-2">
+                <a href="index.html" class="block">Home</a>
+                <a href="reply/index.html" class="block">Templates</a>
+                <a href="about.html" class="block">About</a>
+                <a href="privacy.html" class="block">Privacy</a>
+                <a href="terms.html" class="block">Terms</a>
+            </nav>
+        </div>
+    </header>
 
-  <div id="mobile-nav" class="hidden border-t bg-gray-50 md:hidden">
-    <nav class="flex flex-col p-4 space-y-3 text-sm">
-      <a href="reply/index.html">Templates</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms</a>
-      <a href="disclaimer.html">Disclaimer</a>
-    </nav>
-  </div>
-</header>
+    <!-- HERO -->
+    <main class="flex-grow">
 
+        <section class="bg-white border-b border-gray-200">
+            <div class="max-w-4xl mx-auto py-20 px-4 sm:px-6 lg:px-8 text-center">
+                <span
+                    class="inline-block bg-gray-100 text-navy-900 text-xs font-bold px-3 py-1 uppercase tracking-widest border border-gray-300 mb-6">
+                    Free Workplace Email Tools
+                </span>
 
-<!-- HERO -->
-<section class="py-16 text-center">
-  <span class="inline-block bg-blue-100 text-blue-600 text-xs font-semibold px-4 py-1">FREE WORKPLACE EMAIL TOOLS</span>
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+                    Communicate with Authority.
+                </h1>
 
-  <h1 class="text-4xl font-bold mt-6">Professional replies, written for you.</h1>
+                <p class="text-xl text-gray-500 mb-10 max-w-2xl mx-auto">
+                    Professional, vetted email templates for difficult conversations, administrative responses, and
+                    corporate correspondence.
+                </p>
 
-  <p class="text-gray-600 max-w-2xl mx-auto mt-4">
-    Stop overthinking your emails. Browse ready-to-copy templates for acknowledgments, declines, follow-ups and difficult conversations.
-  </p>
+                <div class="max-w-xl mx-auto mb-8">
+                    <form action="reply/index.html" method="GET" class="flex shadow-sm">
+                        <label for="search" class="sr-only">Search templates</label>
+                        <div class="relative flex-grow">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <input type="text" name="search" id="search"
+                                class="block w-full pl-10 pr-3 py-4 border border-gray-300 text-gray-900 placeholder-gray-500 focus:ring-1 focus:ring-navy-900 focus:border-navy-900 sm:text-sm bg-white"
+                                placeholder="Search for templates (e.g., 'Resignation', 'Meeting Request')">
+                        </div>
+                        <button type="submit"
+                            class="-ml-px inline-flex items-center px-8 py-4 border border-navy-900 text-sm font-bold text-white bg-navy-900 hover:bg-navy-800">
+                            Search
+                        </button>
+                    </form>
+                </div>
 
-  <form action="reply/index.html" method="GET" class="max-w-xl mx-auto mt-8 border py-3 px-4 flex items-center gap-3">
-    <svg class="w-5 h-5 text-gray-400"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-    <input type="text" name="search" placeholder="Search scenarios (e.g., 'Late reply')" class="flex-1 outline-none"/>
-  </form>
+                <div class="text-sm text-gray-500">
+                    <span class="font-semibold text-gray-700 mr-2">Popular:</span>
+                    <a href="reply/resignation.html" class="hover:text-navy-900 hover:underline mr-3">Resignation</a>
+                    <a href="reply/out-of-office.html" class="hover:text-navy-900 hover:underline mr-3">Out of Office</a>
+                    <a href="reply/decline-meeting.html" class="hover:text-navy-900 hover:underline">Decline Meeting</a>
+                </div>
+            </div>
+        </section>
 
-  <div class="mt-4 text-sm text-gray-600">
-    Popular: 
-    <a href="reply/ok.html" class="underline">Saying OK</a> •
-    <a href="reply/meeting-reschedule.html" class="underline">Reschedule Meeting</a> •
-    <a href="reply/thanks.html" class="underline">Formal Thanks</a>
-  </div>
-</section>
+        <!-- RECENT + POPULAR -->
+        <section class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
 
+            <div class="mb-10 border-b border-gray-200 pb-4">
+                <h2 class="text-2xl font-bold text-gray-900">Recently Added &amp; Popular</h2>
+            </div>
 
-<!-- RECENTLY ADDED -->
-<section class="max-w-6xl mx-auto px-4">
-  <h2 class="text-2xl font-semibold mb-2">Recently Added & Popular</h2>
-  <p class="text-gray-600 mb-6">Trending email templates used by professionals.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-  <h3 class="font-semibold text-green-700 mb-2">Trending</h3>
-  <ul class="mb-6 space-y-2">
-    <li><a href="reply/ok.html">Saying OK</a></li>
-    <li><a href="reply/received.html">Confirm Receipt</a></li>
-    <li><a href="reply/follow-up.html">Follow Up Email</a></li>
-    <li><a href="reply/say-no.html">Say No</a></li>
-  </ul>
+                <div>
+                    <h3
+                        class="text-lg font-bold text-navy-900 uppercase tracking-wide mb-4 border-l-4 border-navy-900 pl-3">
+                        Trending</h3>
+                    <ul class="space-y-3">
+                        <li><a href="reply/sick-leave.html" class="hover:text-navy-900">Sick Leave Notification</a></li>
+                        <li><a href="reply/follow-up-interview.html"
+                                class="hover:text-navy-900">Post-Interview Follow Up</a></li>
+                        <li><a href="reply/ask-for-raise.html" class="hover:text-navy-900">Salary Negotiation</a></li>
+                        <li><a href="reply/introduction.html" class="hover:text-navy-900">Client Introduction</a></li>
+                    </ul>
+                </div>
 
-  <h3 class="font-semibold text-blue-700 mb-2">Difficult Conversations</h3>
-  <ul class="mb-6 space-y-2">
-    <li><a href="reply/apology.html">Apology Email</a></li>
-    <li><a href="reply/decline-meeting.html">Decline Meeting</a></li>
-    <li><a href="reply/late-email.html">Late Reply</a></li>
-    <li><a href="reply/as-discussed.html">As Discussed</a></li>
-  </ul>
+                <div>
+                    <h3
+                        class="text-lg font-bold text-navy-900 uppercase tracking-wide mb-4 border-l-4 border-navy-900 pl-3">
+                        Difficult Conversations</h3>
+                    <ul class="space-y-3">
+                        <li><a href="reply/missed-deadline.html" class="hover:text-navy-900">Apology for Missed
+                                Deadline</a></li>
+                        <li><a href="reply/decline-offer.html" class="hover:text-navy-900">Decline Job Offer</a>
+                        </li>
+                        <li><a href="reply/complaint-response.html" class="hover:text-navy-900">Customer Complaint
+                                Response</a></li>
+                        <li><a href="reply/cancel-contract.html" class="hover:text-navy-900">Contract Termination
+                                Notice</a></li>
+                    </ul>
+                </div>
 
-  <h3 class="font-semibold text-indigo-700 mb-2">Administrative</h3>
-  <ul class="space-y-2">
-    <li><a href="reply/well-received.html">Well Received</a></li>
-    <li><a href="reply/seen.html">Seen</a></li>
-  </ul>
+                <div>
+                    <h3
+                        class="text-lg font-bold text-navy-900 uppercase tracking-wide mb-4 border-l-4 border-navy-900 pl-3">
+                        Administrative</h3>
+                    <ul class="space-y-3">
+                        <li><a href="reply/meeting-agenda.html" class="hover:text-navy-900">Meeting Agenda</a></li>
+                        <li><a href="reply/password-reset.html" class="hover:text-navy-900">Password Reset</a></li>
+                        <li><a href="reply/vacation-handover.html" class="hover:text-navy-900">Vacation Handover</a></li>
+                        <li><a href="reply/receipt-acknowledgement.html" class="hover:text-navy-900">Document
+                                Acknowledgement</a></li>
+                    </ul>
+                </div>
 
-</section>
+            </div>
 
+            <div class="mt-12 text-center">
+                <a href="reply/index.html"
+                    class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-sm font-medium text-gray-700 bg-white hover:text-navy-900 hover:bg-gray-50">
+                    View All Templates
+                </a>
+            </div>
+        </section>
+    </main>
 
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
 
-<!-- FOOTER -->
-<footer class="bg-gray-800 text-gray-300 mt-16 py-10">
-  <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
 
-    <div class="flex items-center gap-2 mb-4">
-      <img src="logo.svg" class="w-6 h-6 invert" alt="Logo">
-      <span class="font-bold text-white">ReplyPolitely</span>
-    </div>
+                <div class="col-span-2 md:col-span-1">
+                    <span class="text-lg font-bold">ReplyPolitely</span>
+                    <p class="mt-2 text-sm text-gray-400">
+                        The definitive source for professional email templates. Clean, authoritative, and ready to use.
+                    </p>
+                </div>
 
-    <p class="text-sm mb-6 max-w-md">
-      Simplifying professional communication one email at a time.
-    </p>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase">Templates</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="reply/index.html" class="text-gray-300 hover:text-white">All Categories</a></li>
+                        <li><a href="reply/index.html?sort=trending" class="text-gray-300 hover:text-white">Trending</a>
+                        </li>
+                        <li><a href="reply/index.html?sort=new" class="text-gray-300 hover:text-white">New</a></li>
+                    </ul>
+                </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase">Company</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
 
-      <div>
-        <h4 class="font-semibold text-white mb-2">Templates</h4>
-        <a href="reply/index.html" class="block">Browse Directory</a>
-        <a href="reply/ok.html" class="block">Saying OK</a>
-        <a href="reply/decline-meeting.html" class="block">Decline</a>
-      </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase">Legal</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                        </li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white">Terms of Use</a></li>
+                        <li><a href="disclaimer.html" class="text-gray-300 hover:text-white">Disclaimer</a></li>
+                    </ul>
+                </div>
 
-      <div>
-        <h4 class="font-semibold text-white mb-2">Company</h4>
-        <a href="about.html" class="block">About Us</a>
-        <a href="contact.html" class="block">Contact</a>
-      </div>
+            </div>
 
-      <div>
-        <h4 class="font-semibold text-white mb-2">Legal</h4>
-        <a href="privacy.html" class="block">Privacy Policy</a>
-        <a href="terms.html" class="block">Terms of Service</a>
-        <a href="disclaimer.html" class="block">Disclaimer</a>
-      </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 text-center">
+                <p class="text-base text-gray-500">
+                    &copy; 2025 ReplyPolitely. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
 
-    </div>
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
 
-    <div class="text-xs text-gray-500 mt-8 border-t border-gray-700 pt-4">
-      © 2023 ReplyPolitely. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-
-<script>
-document.getElementById("menu-btn").onclick = () => {
-  document.getElementById("mobile-nav").classList.toggle("hidden");
-}
-</script>
+            this.setAttribute('aria-expanded', !expanded);
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
-</html>
+
+                      </html>
