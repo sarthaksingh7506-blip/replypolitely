@@ -96,14 +96,8 @@
             <div class="flex justify-between h-16 items-center">
                 <a href="/" class="flex items-center gap-3 group">
 
-                    <!-- Replace with actual logo later -->
-                    <!-- <img src="/logo.svg" alt="ReplyPolitely Logo" class="h-8 w-8"> -->
+                    <img src="/logo.png" alt="ReplyPolitely Logo" class="h-8 w-8 rounded-md shadow-glow">
 
-                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white shadow-glow group-hover:shadow-lg transition-all duration-300">
-                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
                     <span class="font-bold text-lg tracking-tight text-slate-900">ReplyPolitely</span>
                 </a>
 
@@ -200,26 +194,26 @@
         });
 
         const templateFiles = [
-            "well-received.html",
+            "apology.html",
+            "approved.html",
             "as-discussed.html",
-            "meeting-agenda.html",
-            "missed-deadline.html",
+            "as-per-your-request.html",
             "decline-meeting.html",
-            "sick-leave.html",
-            "out-of-office.html",
-            "complaint-response.html",
-            "refusal-additional-work.html",
-            "resignation-letter.html",
-            "ask-for-raise.html",
-            "project-handover.html",
-            "payment-reminder.html",
-            "interview-follow-up.html",
-            "introduction-email.html",
-            "late-arrival.html",
-            "thank-you-note.html",
-            "password-reset-request.html",
-            "vacation-request.html",
-            "reference-letter.html"
+            "follow-up.html",
+            "late-email.html",
+            "meeting-reschedule.html",
+            "no-response.html",
+            "noted.html",
+            "ok.html",
+            "per-our-conversation.html",
+            "please-advise.html",
+            "received.html",
+            "say-no.html",
+            "seen.html",
+            "thanks.html",
+            "well-received.html",
+            "will-do.html",
+            "will-review.html"
         ];
 
         function toTitleCase(filename) {
@@ -232,22 +226,22 @@
 
         function getCategory(filename) {
             const name = filename.toLowerCase();
-            if (name.includes('decline') || name.includes('no') || name.includes('refusal') || name.includes('missed') || name.includes('complaint')) {
+            if (name.includes('decline') || name.includes('no') || name.includes('complaint')) {
                 return { label: 'Difficult', color: 'bg-red-50 text-red-700 ring-red-600/10' };
             }
-            if (name.includes('received') || name.includes('discussed') || name.includes('thank') || name.includes('intro')) {
+            if (name.includes('received') || name.includes('thanks') || name.includes('noted') || name.includes('ok')) {
                 return { label: 'Trending', color: 'bg-brand-50 text-brand-700 ring-brand-700/10' };
             }
-            if (name.includes('sick') || name.includes('agenda') || name.includes('office') || name.includes('approval') || name.includes('vacation') || name.includes('reset')) {
+            if (name.includes('meeting') || name.includes('approval') || name.includes('response') || name.includes('request')) {
                 return { label: 'Administrative', color: 'bg-slate-100 text-slate-700 ring-slate-600/10' };
             }
             return { label: 'General', color: 'bg-slate-50 text-slate-600 ring-slate-500/10' };
         }
 
         function generateExcerpt(title) {
-            if(title.includes('Resignation')) return "A formal, professional way to submit your resignation while maintaining good relationships.";
-            if(title.includes('Sick')) return "Notify your manager and team that you are unwell and will be taking sick leave today.";
-            if(title.includes('Decline')) return "Politely decline an invitation or request without burning bridges.";
+            if(title.includes('Apology')) return "Professional apology template to acknowledge mistakes while staying constructive.";
+            if(title.includes('Decline')) return "Politely decline without burning bridges or appearing uncooperative.";
+            if(title.includes('Well')) return "Use this template to acknowledge receipt clearly and professionally.";
             return `Professional template for "${title}". Copy and paste this pre-written response to save time.`;
         }
 
