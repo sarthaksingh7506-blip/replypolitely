@@ -1,23 +1,22 @@
-export const onRequest = async ({ request, env }) => {
-  const url = new URL(request.url);
+export const onRequest = async ({ request, env, params }) => {
+  const path = params.path || "";
 
-  if (url.pathname === "/reply/templates.json") {
-    return indexReplyTemplates();
+  if (path === "reply/templateList") {
+    return indexReplyTemplates(env);
   }
 
   return env.ASSETS.fetch(request);
 };
 
-async function indexReplyTemplates() {
+async function indexReplyTemplates(env) {
   const manifest = __STATIC_CONTENT_MANIFEST;
   const files = JSON.parse(manifest);
 
   const templateList = Object.keys(files)
-    .filter(path => path.startsWith("reply/") && path.endsWith(".html"))
-    .map(path => path.replace("reply/", ""));
+    .filter(p => p.startsWith("reply/") && p.endsWith(".html"))
+    .map(p => p.replace("reply/", "").replace(".html", ""));
 
-  return new Response(
-    JSON.stringify(templateList, null, 2),
-    { headers: { "Content-Type": "application/json" } }
-  );
+  return new Response(JSON.stringify(templateList), {
+    headers: { "Content-Type": "application/json" }
+  });
 }
