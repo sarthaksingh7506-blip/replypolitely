@@ -1,7 +1,7 @@
 export const onRequest = async ({ request, env, params }) => {
   const path = params.path || "";
 
-  if (path === "reply/templateList") {
+  if (path === "templateList") {
     return indexReplyTemplates(env);
   }
 
@@ -16,7 +16,7 @@ async function indexReplyTemplates(env) {
     .filter(p => p.startsWith("reply/") && p.endsWith(".html"))
     .map(p => p.replace("reply/", "").replace(".html", ""));
 
-  return new Response(JSON.stringify(templateList), {
+  return new Response(JSON.stringify(templateList, null, 2), {
     headers: { "Content-Type": "application/json" }
   });
 }
