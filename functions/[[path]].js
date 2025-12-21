@@ -1,5 +1,3 @@
-import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
-
 export async function onRequest({ request, env }) {
   const url = new URL(request.url);
   const pathname = url.pathname;
@@ -8,14 +6,8 @@ export async function onRequest({ request, env }) {
     return indexReplyTemplates(env);
   }
 
-  try {
-    return await getAssetFromKV(
-      { request },
-      { ASSET_NAMESPACE: env.ASSETS }
-    );
-  } catch (e) {
-    return new Response("Not found", { status: 404 });
-  }
+  // Let Cloudflare Pages serve static files automatically
+  return env.ASSETS.fetch(request);
 }
 
 async function indexReplyTemplates(env) {
