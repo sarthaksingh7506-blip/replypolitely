@@ -4,35 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReplyPolitely.site | Professional Workplace Email Templates</title>
-
-    <meta name="description" content="Professional email templates for 'Well Received', 'As Discussed', 'Per Our Conversation', 'OK', 'Received', and more. Copy-paste ready for workplace communication.">
+    
+    <meta name="description" content="Professional workplace email templates for phrases like 'Well Received', 'As Discussed', 'Per Our Conversation', and polite apologies. Copy, paste, and send.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://replypolitely.site/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://replypolitely.site/">
+    <meta property="og:title" content="ReplyPolitely.site | Professional Email Templates">
+    <meta property="og:description" content="Stop overthinking your emails. Use our authoritative templates for workplace communication.">
+    <meta property="og:image" content="https://replypolitely.site/og-image.png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
                     colors: {
                         brand: {
                             50: '#f0f9ff',
                             100: '#e0f2fe',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            900: '#0c4a6e'
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7', 
+                            700: '#0369a1', 
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        slate: {
+                            850: '#1e293b', 
                         }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(2, 132, 199, 0.15)',
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                     }
                 }
             }
         }
     </script>
-
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -45,98 +66,245 @@
       }
     }
     </script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen relative overflow-x-hidden">
 
-<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-400/20 rounded-full blur-[120px] -z-10 pointer-events-none opacity-60"></div>
 
-    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="/" class="font-bold text-lg text-slate-900 tracking-tight flex items-center gap-2">
-                <span class="bg-brand-600 text-white rounded px-2 py-0.5 text-sm">RP</span>
-                ReplyPolitely
-            </a>
+    <nav class="sticky top-0 z-50 glass border-b border-slate-200/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                
+                <div class="flex items-center gap-3">
+                    <a href="/" class="flex items-center gap-2 group">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white shadow-glow group-hover:shadow-lg transition-all duration-300">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <span class="font-bold text-lg tracking-tight text-slate-900">ReplyPolitely</span>
+                    </a>
+                </div>
 
-            <div class="flex gap-6 text-sm font-medium">
-                <a href="/reply/index.html" class="text-slate-600 hover:text-brand-600">Templates</a>
-                <a href="/about.html" class="text-slate-600 hover:text-brand-600">About</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-sm font-medium text-slate-900">Home</a>
+                    <a href="/reply/index.html" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">Templates</a>
+                    <a href="/about.html" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">About</a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-500 hover:bg-slate-100 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-brand-700 bg-brand-50">Home</a>
+                <a href="/reply/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Templates</a>
+                <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">About</a>
             </div>
         </div>
     </nav>
 
     <main class="flex-grow">
-        <section class="bg-white pt-20 pb-24 border-b border-slate-200 text-center">
-            <div class="max-w-4xl mx-auto px-4">
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                    Professional replies for <br>
-                    <span class="text-brand-600">every workplace scenario.</span>
-                </h1>
+        <section class="relative pt-20 pb-28 sm:pt-28 sm:pb-36 overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-brand-200 bg-brand-50/80 backdrop-blur-sm text-brand-700 text-xs font-semibold uppercase tracking-wider mb-8 shadow-sm">
+                    Professional Email Tools
+                </div>
 
-                <p class="text-lg text-slate-500 mb-10">
-                    Find templates for “OK”, “Received”, “Thanks”, “As Discussed”, and more. Stop overthinking, reply confidently.
+                <h1 class="text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight mb-6 leading-[1.1]">
+                    Write professional emails <br class="hidden sm:block">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">without the anxiety.</span>
+                </h1>
+                
+                <p class="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-slate-500 leading-relaxed mb-12">
+                    Copy-paste ready templates for "Well Received", "As Discussed", and polite refusals. Communicate with absolute authority.
                 </p>
 
-                <form action="/reply/index.html" method="GET" class="max-w-xl mx-auto relative">
-                    <input type="text" name="search" placeholder="Search templates (e.g., 'OK', 'Received')" 
-                        class="w-full pl-5 pr-12 py-4 rounded-xl border border-slate-300 shadow-sm focus:border-brand-600 focus:ring-1 focus:ring-brand-600 outline-none transition">
-                    <button type="submit" class="absolute right-2 top-2 bottom-2 bg-brand-600 text-white px-4 rounded-lg font-medium hover:bg-brand-700">
-                        Search
-                    </button>
-                </form>
+                <div class="max-w-2xl mx-auto relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-400 to-indigo-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                    
+                    <form action="/reply/index.html" method="GET" class="relative bg-white rounded-xl shadow-xl flex items-center p-2 border border-slate-100 ring-1 ring-black/5">
+                        <div class="pl-4 pr-3 text-slate-400">
+                            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <input type="search" name="search" autocomplete="on" inputmode="text" placeholder="What do you need to write? (e.g. 'Late', 'Resignation')" 
+                            class="w-full py-3 sm:py-4 text-base sm:text-lg bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400 outline-none" required>
+                        <button type="submit" class="hidden sm:flex items-center justify-center bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-brand-600 transition-colors shadow-lg shadow-brand-500/20">
+                            Search
+                        </button>
+                    </form>
+                </div>
+
+                <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm text-slate-500">
+                    <span class="font-medium text-slate-700">Trending:</span>
+                    <a href="/reply/well-received.html" class="hover:text-brand-600 hover:underline decoration-brand-600/30 underline-offset-2">Well Received</a>
+                    <span class="text-slate-300">•</span>
+                    <a href="/reply/as-discussed.html" class="hover:text-brand-600 hover:underline decoration-brand-600/30 underline-offset-2">As Discussed</a>
+                    <span class="text-slate-300">•</span>
+                    <a href="/reply/decline-meeting.html" class="hover:text-brand-600 hover:underline decoration-brand-600/30 underline-offset-2">Decline Meeting</a>
+                </div>
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-4 py-16">
-            <div class="flex justify-between items-end mb-8">
-                <h2 class="text-2xl font-bold text-slate-900">Explore Categories</h2>
-                <a href="/reply/index.html" class="text-brand-600 font-medium hover:underline text-sm">Browse all templates →</a>
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+            <div class="flex items-end justify-between mb-10 border-b border-slate-200 pb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Browse Categories</h2>
+                    <p class="mt-1 text-slate-500">Select a scenario to find the perfect template.</p>
+                </div>
+                <a href="/reply/index.html" class="hidden sm:block text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors">View All Templates &rarr;</a>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-
-                <!-- Trending -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <h3 class="font-bold text-lg text-slate-800 mb-4">Trending Phrases</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="/reply/ok.html" class="text-slate-600 hover:text-brand-600">Reply to “OK” Professionally</a></li>
-                        <li><a href="/reply/received.html" class="text-slate-600 hover:text-brand-600">Reply to “Received” Professionally</a></li>
-                        <li><a href="/reply/thanks.html" class="text-slate-600 hover:text-brand-600">Reply to “Thanks” Professionally</a></li>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="glass-card rounded-2xl p-6 sm:p-8 hover:shadow-glow hover:border-brand-200 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Everyday & Trending</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="/reply/well-received.html" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-brand-400"></span>
+                                "Well Received" Confirmation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/reply/as-discussed.html" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-brand-400"></span>
+                                "As Discussed" Recap
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/reply/gentle-reminder.html" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-brand-400"></span>
+                                Gentle Reminder
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Challenging -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <h3 class="font-bold text-lg text-slate-800 mb-4">Difficult Conversations</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="/reply/as-discussed.html" class="text-slate-600 hover:text-brand-600">Reply to “As Discussed”</a></li>
-                        <li><a href="/reply/per-our-conversation.html" class="text-slate-600 hover:text-brand-600">Reply to “Per Our Conversation”</a></li>
-                        <li><a href="/reply/decline-meeting.html" class="text-slate-600 hover:text-brand-600">Decline Meeting Request</a></li>
+                <div class="glass-card rounded-2xl p-6 sm:p-8 hover:shadow-glow hover:border-red-200 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center text-red-500 mb-6 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Difficult Conversations</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="/reply/missed-deadline.html" class="flex items-center text-slate-600 hover:text-red-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-red-400"></span>
+                                Missed Deadline Apology
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/reply/decline-meeting.html" class="flex items-center text-slate-600 hover:text-red-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-red-400"></span>
+                                Decline Meeting Request
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/reply/refusal.html" class="flex items-center text-slate-600 hover:text-red-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-red-400"></span>
+                                Refusing Additional Work
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Administrative -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
-                    <h3 class="font-bold text-lg text-slate-800 mb-4">Administrative</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="/reply/noted.html" class="text-slate-600 hover:text-brand-600">Reply to “Noted”</a></li>
-                        <li><a href="/reply/approved.html" class="text-slate-600 hover:text-brand-600">Reply to “Approved”</a></li>
-                        <li><a href="/reply/well-received.html" class="text-slate-600 hover:text-brand-600">Reply to “Well Received”</a></li>
+                <div class="glass-card rounded-2xl p-6 sm:p-8 hover:shadow-glow hover:border-slate-300 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 mb-6 group-hover:bg-slate-700 group-hover:text-white transition-colors duration-300">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Administrative</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="/reply/out-of-office.html" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-brand-400"></span>
+                                Standard Out of Office
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/reply/sick-leave.html" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-brand-400"></span>
+                                Sick Leave Notification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/reply/meeting-agenda.html" class="flex items-center text-slate-600 hover:text-brand-600 transition-colors">
+                                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mr-3 group-hover:bg-brand-400"></span>
+                                Sending Meeting Agenda
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
+            </div>
+            
+            <div class="mt-12 text-center sm:hidden">
+                <a href="/reply/index.html" class="inline-flex items-center px-6 py-3 border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition">
+                    View Full Library
+                </a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-white border-t border-slate-200 py-10 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-            <div>&copy; 2025 ReplyPolitely.site. All rights reserved.</div>
-            <div class="flex gap-6 mt-4 md:mt-0">
-                <a href="/terms.html" class="hover:text-slate-900">Terms</a>
-                <a href="/privacy.html" class="hover:text-slate-900">Privacy</a>
-                <a href="/disclaimer.html" class="hover:text-slate-900">Disclaimer</a>
+    <footer class="bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="flex flex-col items-center md:items-start">
+                <span class="text-slate-900 font-bold tracking-tight mb-1">ReplyPolitely</span>
+                <p class="text-xs text-slate-500">
+                    &copy; 2025 ReplyPolitely.site. All rights reserved.
+                </p>
+            </div>
+
+            <div class="flex gap-8 text-sm text-slate-500">
+                <a href="/terms.html" rel="nofollow" class="hover:text-slate-900 transition-colors">Terms</a>
+                <a href="/privacy.html" rel="nofollow" class="hover:text-slate-900 transition-colors">Privacy</a>
+                <a href="/disclaimer.html" rel="nofollow" class="hover:text-slate-900 transition-colors">Disclaimer</a>
             </div>
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
