@@ -1,32 +1,56 @@
-// /functions/build-template-index.js
+/**
+ * Cloudflare Pages Function
+ * Auto-index HTML templates inside /reply folder.
+ * Output JSON for frontend consumption.
+ */
 
-const fs = require('fs');
-const path = require('path');
+import { readdir } from 'node:fs/promises';
+import { join } from 'node:path';
 
-const replyDir = path.join(__dirname, '..', 'reply');
-const outputFile = path.join(__dirname, '..', 'template-index.json');
+export async function onRequest(context) {
+  try {
+    const root = context.env.PAGES_APP_DIR || process.cwd();
+    const replyPath = join(root, 'reply');
 
-function generateIndex() {
-    const templates = [];
+    let files = await readdir(replyPath, { withFileTypes: true });
 
-    const files = fs.readdirSync(replyDir);
+    // Filter only .html files
+    files = files
+      .filter(file => file.isFile() && file.name.endsWith('.html'))
+      .map(file => file.name)
+      .filter(name => name !== 'index.html'); // ignore hub index
 
-    files.forEach(file => {
-        if (file.endsWith('.html') && file !== 'index.html') {
-            const name = file
-                .replace('.html', '')
-                .replace(/-/g, ' ')
-                .replace(/\b\w/g, c => c.toUpperCase());
+    // Example filtering: remove non-template files
+    const templates = files.map(name => ({
+      filename: name,
+      title: formatTitle(name),
+      slug: `/reply/${name}`
+    }));
 
-            templates.push({
-                title: name,
-                file: `/reply/${file}`
-            });
-        }
+    return new Response(JSON.stringify({
+      status: "success",
+      count: templates.length,
+      templates
+    }), {
+      headers: { "Content-Type": "application/json" }
     });
-
-    fs.writeFileSync(outputFile, JSON.stringify(templates, null, 2));
-    console.log('template-index.json generated successfully!');
+  } catch (err) {
+    return new Response(JSON.stringify({
+      status: "error",
+      message: err.toString()
+    }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
 }
 
-generateIndex();
+/**
+ * Converts `as-discussed.html` → `As Discussed`
+ */
+function formatTitle(filename) {
+  const name = filename.replace('.html', '');
+  return name
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
