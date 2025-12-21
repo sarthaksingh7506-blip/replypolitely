@@ -1,7 +1,7 @@
 export const onRequest = async ({ request, env, params }) => {
   const path = params.path || "";
 
-  if (path === "templateList") {
+  if (path.endsWith("templateList")) {
     return indexReplyTemplates(env);
   }
 
