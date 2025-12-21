@@ -1,18 +1,27 @@
-import manifestJSON from '__STATIC_CONTENT_MANIFEST';
+import { getAssetFromKV } from "@cloudflare/kv-asset-handler";
 
 export async function onRequest({ request, env }) {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
   if (pathname.endsWith("/reply/templateList")) {
-    return indexReplyTemplates();
+    return indexReplyTemplates(env);
   }
 
-  return env.ASSETS.fetch(request);
+  try {
+    return await getAssetFromKV(
+      { request },
+      { ASSET_NAMESPACE: env.ASSETS }
+    );
+  } catch (e) {
+    return new Response("Not found", { status: 404 });
+  }
 }
 
-async function indexReplyTemplates() {
-  const files = JSON.parse(manifestJSON);
+async function indexReplyTemplates(env) {
+  const manifest = env.__STATIC_CONTENT_MANIFEST;
+
+  const files = JSON.parse(manifest);
 
   const list = Object.keys(files)
     .filter(p => p.startsWith("reply/") && p.endsWith(".html"))
