@@ -1,17 +1,18 @@
+import manifestJSON from "__STATIC_CONTENT_MANIFEST";
+
 export async function onRequest({ request, env }) {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
   if (pathname.startsWith("/reply/templateList")) {
-    return indexReplyTemplates(env);
+    return indexReplyTemplates();
   }
 
   return env.ASSETS.fetch(request);
 }
 
-async function indexReplyTemplates(env) {
-  const manifest = env.__STATIC_CONTENT_MANIFEST;
-  const files = JSON.parse(manifest);
+async function indexReplyTemplates() {
+  const files = JSON.parse(manifestJSON);
 
   const list = Object.keys(files)
     .filter(p => p.startsWith("reply/") && p.endsWith(".html"))
