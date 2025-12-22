@@ -1,25 +1,13 @@
-import manifestJSON from "__STATIC_CONTENT_MANIFEST";
-
-export async function onRequest({ request }) {
+export async function onRequest({ request, env }) {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
-  if (pathname.startsWith("/reply/templateList")) {
-    return indexReplyTemplates();
+  if (pathname === "/reply/templateList") {
+    const res = await env.ASSETS.fetch("/templates.json");
+    return new Response(res.body, {
+      headers: { "Content-Type": "application/json" }
+    });
   }
 
-  return ASSETS.fetch(request);
-}
-
-async function indexReplyTemplates() {
-  const files = JSON.parse(manifestJSON);
-
-  const list = Object.keys(files)
-    .filter(p => p.startsWith("reply/") && p.endsWith(".html"))
-    .map(p => p.replace("reply/", "").replace(".html", ""));
-
-  return new Response(
-    JSON.stringify(list, null, 2),
-    { headers: { "Content-Type": "application/json" } }
-  );
+  return env.ASSETS.fetch(request);
 }
