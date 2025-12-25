@@ -2,11 +2,7 @@ import fs from "fs";
 import path from "path";
 
 const REPLY_DIR = path.join(process.cwd(), "reply");
-const OUTPUT_DIR = path.join(process.cwd(), "dist", "reply");
-
-if (!fs.existsSync(OUTPUT_DIR)) {
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-}
+const OUTPUT_FILE = path.join(REPLY_DIR, "templates.json");
 
 const files = fs
   .readdirSync(REPLY_DIR)
@@ -19,34 +15,15 @@ function titleFromFile(file) {
     .replace(/\b\w/g, c => c.toUpperCase());
 }
 
-const cards = files.map(file => {
-  const title = titleFromFile(file);
-  return `
-    <a href="/reply/${file}">
-      <div style="padding:16px;border:1px solid #ddd;margin-bottom:10px;">
-        <strong>${title}</strong><br>
-        Professional email template
-      </div>
-    </a>
-  `;
-}).join("");
+const templates = files.map(file => ({
+  title: titleFromFile(file),
+  slug: file,
+  description: "Professional email template"
+}));
 
-const html = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>ReplyPolitely Templates</title>
-<meta name="description" content="Professional workplace email templates">
-<link rel="canonical" href="https://replypolitely.site/reply/">
-</head>
-<body>
-<h1>Template Library</h1>
-${cards}
-</body>
-</html>
-`;
+fs.writeFileSync(
+  OUTPUT_FILE,
+  JSON.stringify(templates, null, 2)
+);
 
-fs.writeFileSync(path.join(OUTPUT_DIR, "index.html"), html);
-
-console.log("Reply index generated");
+console.log("templates.json generated");
