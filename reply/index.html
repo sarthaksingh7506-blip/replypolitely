@@ -9,12 +9,15 @@
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://replypolitely.site/reply/">
-    
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://replypolitely.site/reply/">
     <meta property="og:title" content="Professional Email Templates Hub">
-    <meta property="og:description" content="Browse our collection of 50+ professional email templates. Zero ads, zero tracking.">
-    <meta property="og:image" content="https://replypolitely.site/assets/og-image.jpg">
+    <meta property="og:description" content="Browse our collection of professional email templates.">
+    <meta property="og:image" content="https://replypolitely.site/logo.svg">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,191 +33,147 @@
                         primary: '#111827',
                         secondary: '#6B7280',
                         accent: '#2563EB',
-                        surface: '#F9FAFB',
+                        surface: '#F9FAFB'
                     }
                 }
             }
         }
     </script>
 
+    <!-- ORGANIZATION LOGO FOR GOOGLE -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Email Templates Hub",
-      "description": "A collection of professional email templates.",
-      "url": "https://replypolitely.site/reply/",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "ReplyPolitely",
-        "url": "https://replypolitely.site"
-      }
+      "@type": "Organization",
+      "name": "ReplyPolitely",
+      "url": "https://replypolitely.site",
+      "logo": "https://replypolitely.site/logo.svg"
     }
     </script>
 
     <style>
         body { -webkit-font-smoothing: antialiased; }
         .template-card:hover h3 { color: #2563EB; }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
+
 <body class="bg-white text-primary flex flex-col min-h-screen">
 
-    <nav class="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-10">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="/" class="font-bold text-xl tracking-tight text-gray-900">
-                Reply<span class="text-accent">Politely</span>
-            </a>
-            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-                <a href="/about" class="hover:text-gray-900">About</a>
-                <a href="/pricing" class="hover:text-gray-900">Pricing</a>
-            </div>
+<!-- NAV WITH LOGO -->
+<nav class="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 font-bold text-lg text-gray-900">
+            <img src="/logo.svg" alt="ReplyPolitely Logo" class="h-8 w-8">
+            ReplyPolitely
+        </a>
+        <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+            <a href="/" class="hover:text-gray-900">Home</a>
+            <a href="/about.html" class="hover:text-gray-900">About</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="flex-grow">
-        <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 text-center">
-            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-gray-900">
-                Templates for difficult conversations.
-            </h1>
-            <p class="text-lg text-secondary max-w-2xl mx-auto mb-8">
-                Professional, ready-to-use HTML email templates. Copy, paste, and hit send with confidence.
-            </p>
+<main class="flex-grow">
 
-            <div class="relative max-w-xl mx-auto group">
-                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                    <svg class="h-5 w-5 text-gray-400 group-focus-within:text-accent transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    placeholder="Search templates (e.g., 'apology', 'raise', 'decline')..." 
-                    class="block w-full pl-11 pr-4 py-3.5 bg-surface border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all shadow-sm"
-                    aria-label="Search email templates"
-                >
-            </div>
-        </section>
+<!-- HERO -->
+<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10 text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+        Templates for difficult conversations.
+    </h1>
+    <p class="text-lg text-secondary mb-8">
+        Professional, ready-to-use email templates. Copy, paste, send.
+    </p>
 
-        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-            <div id="loading" class="text-center py-12" aria-live="polite">
-                <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-                <p class="mt-4 text-sm text-gray-500">Loading templates...</p>
-            </div>
+    <input
+        id="searchInput"
+        type="text"
+        placeholder="Search templates (e.g. apology, decline, follow up)"
+        class="w-full max-w-xl mx-auto px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-accent/20"
+    >
+</section>
 
-            <div id="templateGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden"></div>
-            
-            <div id="noResults" class="hidden text-center py-12">
-                <p class="text-gray-500">No templates found matching your search.</p>
-                <button onclick="document.getElementById('searchInput').value=''; renderTemplates(allTemplates);" class="mt-4 text-accent font-medium hover:underline">
-                    Clear search
-                </button>
-            </div>
-        </section>
-    </main>
+<!-- HOME-LIKE SECTIONS -->
+<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 grid gap-6 md:grid-cols-3">
 
-    <footer class="bg-gray-50 border-t border-gray-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm text-gray-500">&copy; 2025 ReplyPolitely. All rights reserved.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-500">
-                <a href="/privacy" class="hover:text-gray-900">Privacy</a>
-                <a href="/terms" class="hover:text-gray-900">Terms</a>
-            </div>
-        </div>
-    </footer>
+    <div class="bg-gray-50 rounded-xl p-6">
+        <h2 class="font-semibold mb-3">Everyday & Trending</h2>
+        <ul class="text-sm space-y-2">
+            <li><a href="/reply/well-received.html" class="text-accent hover:underline">Well Received</a></li>
+            <li><a href="/reply/as-discussed.html" class="text-accent hover:underline">As Discussed</a></li>
+            <li><a href="/reply/received.html" class="text-accent hover:underline">Received</a></li>
+        </ul>
+    </div>
 
-    <script>
-        const grid = document.getElementById('templateGrid');
-        const searchInput = document.getElementById('searchInput');
-        const loading = document.getElementById('loading');
-        const noResults = document.getElementById('noResults');
-        
-        let allTemplates = [];
+    <div class="bg-gray-50 rounded-xl p-6">
+        <h2 class="font-semibold mb-3">Difficult Conversations</h2>
+        <ul class="text-sm space-y-2">
+            <li><a href="/reply/no-response.html" class="text-accent hover:underline">No Response</a></li>
+            <li><a href="/reply/decline-meeting.html" class="text-accent hover:underline">Decline Meeting</a></li>
+            <li><a href="/reply/say-no.html" class="text-accent hover:underline">Say No Politely</a></li>
+        </ul>
+    </div>
 
-        async function init() {
-            try {
-                const response = await fetch('/reply/templates.json', { cache: 'no-store' });
-                if (!response.ok) throw new Error('Fetch failed');
+    <div class="bg-gray-50 rounded-xl p-6">
+        <h2 class="font-semibold mb-3">Administrative</h2>
+        <ul class="text-sm space-y-2">
+            <li><a href="/reply/approved.html" class="text-accent hover:underline">Approved</a></li>
+            <li><a href="/reply/noted.html" class="text-accent hover:underline">Noted</a></li>
+            <li><a href="/reply/will-review.html" class="text-accent hover:underline">Will Review</a></li>
+        </ul>
+    </div>
 
-                const data = await response.json();
-                if (!Array.isArray(data)) throw new Error('Invalid JSON format');
+</section>
 
-                allTemplates = data;
+<!-- GRID -->
+<section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+    <div id="loading" class="text-center py-12">
+        Loading templates…
+    </div>
 
-                allTemplates.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+    <div id="templateGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden"></div>
+</section>
 
-                loading.classList.add('hidden');
-                grid.classList.remove('hidden');
-                renderTemplates(allTemplates);
-            } catch (error) {
-                loading.innerHTML = '<p class="text-red-500">Unable to load templates. Please refresh.</p>';
-                console.error(error);
-            }
-        }
+</main>
 
-        function renderTemplates(templates) {
-            grid.innerHTML = '';
+<footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-500">
+    © 2025 ReplyPolitely. All rights reserved.
+</footer>
 
-            if (!templates || templates.length === 0) {
-                grid.classList.add('hidden');
-                noResults.classList.remove('hidden');
-                return;
-            }
+<script>
+const grid = document.getElementById('templateGrid');
+const searchInput = document.getElementById('searchInput');
+const loading = document.getElementById('loading');
+let allTemplates = [];
 
-            noResults.classList.add('hidden');
-            grid.classList.remove('hidden');
+async function init() {
+    const res = await fetch('/reply/templates.json', { cache: 'no-store' });
+    allTemplates = await res.json();
+    loading.classList.add('hidden');
+    grid.classList.remove('hidden');
+    renderTemplates(allTemplates);
+}
 
-            const fragment = document.createDocumentFragment();
+function renderTemplates(list) {
+    grid.innerHTML = '';
+    list.forEach(t => {
+        const a = document.createElement('a');
+        a.href = `/reply/${t.slug}`;
+        a.className = 'template-card p-6 border rounded-xl hover:shadow-md';
+        a.innerHTML = `<h3 class="font-semibold mb-1">${t.title}</h3><p class="text-sm text-gray-500">${t.description || ''}</p>`;
+        grid.appendChild(a);
+    });
+}
 
-            templates.forEach(t => {
-                if (!t || !t.slug || !t.title) return;
+searchInput.addEventListener('input', e => {
+    const q = e.target.value.toLowerCase();
+    renderTemplates(allTemplates.filter(t =>
+        t.title.toLowerCase().includes(q) ||
+        (t.description || '').toLowerCase().includes(q)
+    ));
+});
 
-                const card = document.createElement('a');
-                card.href = `/reply/${t.slug}`;
-                card.className = 'template-card group block p-6 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-accent/50 transition-all duration-200 flex flex-col h-full';
+init();
+</script>
 
-                card.innerHTML = `
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="p-2 bg-gray-100 rounded-lg group-hover:bg-blue-50 transition-colors">
-                            <svg class="w-6 h-6 text-gray-600 group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-accent transition-colors">${escapeHtml(t.title)}</h3>
-                    <p class="text-sm text-gray-500 line-clamp-3 leading-relaxed">${escapeHtml(t.description || 'View this email template...')}</p>
-                    <div class="mt-auto pt-4 flex items-center text-sm font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                        View Template <span aria-hidden="true" class="ml-1">&rarr;</span>
-                    </div>
-                `;
-                fragment.appendChild(card);
-            });
-
-            grid.appendChild(fragment);
-        }
-
-        function escapeHtml(unsafe) {
-            if (!unsafe) return "";
-            return unsafe
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
-        }
-
-        searchInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            const filtered = allTemplates.filter(t =>
-                (t.title && t.title.toLowerCase().includes(term)) ||
-                (t.description && t.description.toLowerCase().includes(term))
-            );
-            renderTemplates(filtered);
-        });
-
-        document.addEventListener('DOMContentLoaded', init);
-    </script>
 </body>
 </html>
