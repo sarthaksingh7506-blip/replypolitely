@@ -11,12 +11,14 @@
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon-32x32.png" type="image/png">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <meta property="og:site_name" content="ReplyPolitely">
     <meta property="og:title" content="Templates Hub | ReplyPolitely">
     <meta property="og:description" content="Professional email templates for workplace communication.">
     <meta property="og:url" content="https://replypolitely.site/reply/">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://replypolitely.site/logo.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +57,22 @@
         }
     </script>
 
+    <!-- AUTO INDEX SAFE STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ReplyPolitely",
+      "url": "https://replypolitely.site",
+      "logo": "https://replypolitely.site/logo.svg",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://replypolitely.site/reply/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <style>
         .glass {
             background: rgba(255, 255, 255, 0.7);
@@ -62,14 +80,16 @@
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(226, 232, 240, 0.6);
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.9);
             border: 1px solid rgba(226, 232, 240, 1);
         }
+
         .glass-card:hover {
             border-color: #38bdf8;
         }
-        /* Pagination Button Styles */
+
         .page-btn {
             display: inline-flex;
             align-items: center;
@@ -80,119 +100,223 @@
             font-weight: 500;
             transition: all 0.2s;
         }
+
         .page-btn.active {
             background-color: #0ea5e9;
             color: white;
         }
+
         .page-btn:not(.active):hover {
             background-color: #f1f5f9;
             color: #0ea5e9;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen relative overflow-x-hidden">
 
+    <!-- Background Glow -->
     <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-400/20 rounded-full blur-[120px] -z-10 pointer-events-none opacity-60"></div>
 
+    <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 glass transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
+
+                <!-- LOGO -->
                 <div class="flex items-center gap-3">
                     <a href="/" class="flex items-center gap-2 group">
-                        <img src="/logo.svg" alt="ReplyPolitely Logo" class="w-8 h-8 rounded-lg shadow-glow" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <img src="/logo.svg"
+                             alt="ReplyPolitely Logo"
+                             class="w-8 h-8 rounded-lg shadow-glow"
+                             onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); this.nextElementSibling.classList.add('flex')">
+
                         <div class="w-8 h-8 rounded-lg bg-brand-100 hidden items-center justify-center text-brand-600 shadow-glow">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
                         </div>
-                        <span class="font-bold text-lg tracking-tight text-slate-900">ReplyPolitely</span>
+
+                        <span class="font-bold text-lg tracking-tight text-slate-900">
+                            ReplyPolitely
+                        </span>
                     </a>
                 </div>
 
+                <!-- DESKTOP NAV -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="/" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">Home</a>
-                    <a href="/reply/index.html" class="text-sm font-medium text-brand-600">Templates</a>
-                    <a href="/about.html" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">About</a>
+                    <a href="/" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">
+                        Home
+                    </a>
+                    <a href="/reply/index.html" class="text-sm font-medium text-brand-600">
+                        Templates
+                    </a>
+                    <a href="/about.html" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">
+                        About
+                    </a>
                 </div>
 
+                <!-- MOBILE BUTTON -->
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-500 hover:bg-slate-100 focus:outline-none">
+                    <button id="mobile-menu-btn"
+                            class="p-2 rounded-md text-slate-500 hover:bg-slate-100 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
+
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200">
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu"
+             class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200">
             <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Home</a>
-                <a href="/reply/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-700 bg-brand-50">Templates</a>
-                <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">About</a>
+                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">
+                    Home
+                </a>
+                <a href="/reply/index.html"
+                   class="block px-3 py-2 rounded-md text-base font-medium text-brand-700 bg-brand-50">
+                    Templates
+                </a>
+                <a href="/about.html"
+                   class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">
+                    About
+                </a>
             </div>
         </div>
     </nav>
-
     <main class="flex-grow pb-24">
-        
+
+        <!-- HERO / SEARCH -->
         <header class="pt-16 pb-12 sm:pt-20 sm:pb-16 px-4">
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-3">Templates Hub</p>
-                <h1 id="page-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-8">
+                <p class="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-3">
+                    Templates Hub
+                </p>
+
+                <h1 id="page-heading"
+                    class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-8">
                     Browse all templates
                 </h1>
 
                 <div class="relative max-w-xl mx-auto group">
                     <div class="absolute -inset-1 bg-gradient-to-r from-brand-300 to-indigo-300 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
-                    <form id="hub-search-form" class="relative bg-white rounded-lg shadow-card flex items-center p-1.5 border border-slate-200 focus-within:border-brand-300 focus-within:ring-2 focus-within:ring-brand-100 transition-all">
+
+                    <form id="hub-search-form"
+                          class="relative bg-white rounded-lg shadow-card flex items-center p-1.5 border border-slate-200 focus-within:border-brand-300 focus-within:ring-2 focus-within:ring-brand-100 transition-all">
+
                         <div class="pl-3 pr-2 text-slate-400">
-                            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            <svg aria-hidden="true"
+                                 class="w-5 h-5"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
                         </div>
-                        <input type="text" id="hub-search-input" name="search" placeholder="Search templates (e.g. 'Late', 'Salary')" 
-                            class="w-full py-2.5 bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400 outline-none" autocomplete="off">
+
+                        <input type="text"
+                               id="hub-search-input"
+                               name="search"
+                               placeholder="Search templates (e.g. 'Late', 'Salary')"
+                               class="w-full py-2.5 bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400 outline-none"
+                               autocomplete="off">
                     </form>
                 </div>
             </div>
         </header>
 
+        <!-- CONTENT -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div id="categories-container" class="space-y-16"></div>
 
+            <!-- CATEGORY SECTIONS (DYNAMIC) -->
+            <div id="categories-container" class="space-y-16">
+            </div>
+
+            <!-- SEARCH RESULTS VIEW -->
             <div id="search-results-view" class="hidden">
-                <div class="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
-                    <p id="results-count" class="text-sm text-slate-500 font-medium">Found 0 templates</p>
-                    <button id="clear-search" class="text-sm text-brand-600 hover:text-brand-800 font-medium hover:underline">Clear Search</button>
+
+                <div class="flex justify-between items-end mb-6 border-b border-slate-200 pb-4">
+                    <p id="results-count"
+                       class="text-sm text-slate-500 font-medium">
+                        Found 0 templates
+                    </p>
+
+                    <button id="clear-search"
+                            class="text-sm text-brand-600 hover:text-brand-800 font-medium hover:underline">
+                        Clear Search
+                    </button>
                 </div>
 
-                <div id="results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    </div>
+                <div id="results-grid"
+                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                </div>
 
-                <div id="pagination-controls" class="hidden flex justify-center gap-2">
-                    </div>
+                <div id="pagination-controls"
+                     class="hidden flex justify-center gap-2">
+                </div>
 
-                <div id="no-results" class="hidden text-center py-16">
+                <div id="no-results"
+                     class="hidden text-center py-16">
                     <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <svg class="w-8 h-8 text-slate-400"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                     </div>
-                    <h3 class="text-lg font-medium text-slate-900">No matching templates</h3>
-                    <p class="text-slate-500 mt-1">Try checking your spelling or use a broader keyword.</p>
+
+                    <h3 class="text-lg font-medium text-slate-900">
+                        No matching templates
+                    </h3>
+
+                    <p class="text-slate-500 mt-1">
+                        Try checking your spelling or use a broader keyword.
+                    </p>
                 </div>
             </div>
 
-            <div id="loading-state" class="py-20 text-center">
+            <!-- LOADING STATE -->
+            <div id="loading-state"
+                 class="py-20 text-center">
                 <div class="inline-block w-8 h-8 border-4 border-brand-100 border-t-brand-600 rounded-full animate-spin"></div>
-                <p class="mt-4 text-slate-500 text-sm">Loading templates library...</p>
+                <p class="mt-4 text-slate-500 text-sm">
+                    Loading templates library...
+                </p>
             </div>
 
         </div>
     </main>
-
     <footer class="bg-white border-t border-slate-200 mt-auto">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex flex-col items-center md:items-start">
-                <span class="text-slate-900 font-bold tracking-tight mb-1">ReplyPolitely</span>
-                <p class="text-xs text-slate-500">&copy; 2025 ReplyPolitely.site. All rights reserved.</p>
+                <span class="text-slate-900 font-bold tracking-tight mb-1">
+                    ReplyPolitely
+                </span>
+                <p class="text-xs text-slate-500">
+                    &copy; 2025 ReplyPolitely.site. All rights reserved.
+                </p>
             </div>
+
             <div class="flex gap-8 text-sm text-slate-500">
                 <a href="/terms.html" class="hover:text-slate-900 transition-colors">Terms</a>
                 <a href="/privacy.html" class="hover:text-slate-900 transition-colors">Privacy</a>
@@ -204,16 +328,14 @@
     <script>
         /**
          * ReplyPolitely Templates Engine
-         * Handles: Data Fetching, Dynamic Categories, Search, Client-Side Pagination
+         * Features: Dynamic Categorization, Show More, Live Search, Pagination
          */
 
-        // --- State ---
         let allTemplates = [];
         const templatesPerPage = 9;
         let currentPage = 1;
         let currentSearchResults = [];
 
-        // --- DOM Elements ---
         const els = {
             searchForm: document.getElementById('hub-search-form'),
             searchInput: document.getElementById('hub-search-input'),
@@ -228,302 +350,212 @@
             clearBtn: document.getElementById('clear-search')
         };
 
-        // --- Icon Mapping Strategy ---
-        // Maps keywords in category names to SVG paths
         function getCategoryIcon(categoryName) {
             const name = categoryName.toLowerCase();
             const colors = {
                 red: 'text-red-500 bg-red-50',
-                brand: 'text-brand-600 bg-brand-50',
                 slate: 'text-slate-600 bg-slate-100',
-                green: 'text-emerald-600 bg-emerald-50'
+                brand: 'text-brand-600 bg-brand-50',
+                indigo: 'text-indigo-600 bg-indigo-50',
+                emerald: 'text-emerald-600 bg-emerald-50'
             };
 
-            // Icon Paths
             const icons = {
                 warning: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />',
-                check: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />',
                 briefcase: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />',
+                chat: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />',
                 clock: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />',
-                chat: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />'
+                check: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />'
             };
 
-            if (name.includes('difficult') || name.includes('refusal') || name.includes('apology')) {
-                return { svg: icons.warning, style: colors.red };
-            } else if (name.includes('admin') || name.includes('hr') || name.includes('document')) {
-                return { svg: icons.briefcase, style: colors.slate };
-            } else if (name.includes('approval') || name.includes('confirm')) {
-                return { svg: icons.check, style: colors.green };
-            } else if (name.includes('meet') || name.includes('sched') || name.includes('time')) {
-                return { svg: icons.clock, style: colors.brand };
-            }
-            // Default
+            if (name.includes('difficult') || name.includes('apology')) return { svg: icons.warning, style: colors.red };
+            if (name.includes('admin') || name.includes('hr')) return { svg: icons.briefcase, style: colors.slate };
+            if (name.includes('meeting') || name.includes('schedul')) return { svg: icons.clock, style: colors.indigo };
+            if (name.includes('approv') || name.includes('confirm')) return { svg: icons.check, style: colors.emerald };
+
             return { svg: icons.chat, style: colors.brand };
         }
 
-        // --- UI Component Generators ---
-
         function createCardHTML(t) {
-            // Safety check for properties
-            const title = t.title || "Untitled Template";
-            const desc = t.description || "Professional email template for this scenario.";
+            const title = t.title || 'Untitled Template';
+            const desc = t.description || 'Professional email template for this scenario.';
             const url = t.slug ? `/reply/${t.slug}` : '#';
 
             return `
-                <a href="${url}" class="group block h-full">
+                <a href="${url}" class="group block h-full animate-fade-in">
                     <div class="glass-card rounded-xl p-6 h-full transition-all duration-300 group-hover:shadow-glow group-hover:-translate-y-1 relative overflow-hidden flex flex-col">
                         <div class="absolute top-0 left-0 w-1 h-full bg-slate-200 group-hover:bg-brand-500 transition-colors"></div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors line-clamp-1">${title}</h3>
-                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-grow line-clamp-3">${desc}</p>
-                        <div class="mt-auto pt-2">
-                            <span class="text-xs font-semibold text-brand-600 flex items-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                Use Template &rarr;
-                            </span>
-                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors line-clamp-1">
+                            ${title}
+                        </h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            ${desc}
+                        </p>
+                        <span class="text-xs font-semibold text-brand-600 mt-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                            Use Template →
+                        </span>
                     </div>
                 </a>
             `;
         }
 
-        function createCategorySection(categoryName, templates) {
-            const iconData = getCategoryIcon(categoryName);
-            const sectionId = `cat-${categoryName.replace(/\s+/g, '-').toLowerCase()}`;
-            
-            // Logic: If > 6 items, show 6 and a "Load More" button
+        function createCategorySection(name, items) {
+            const icon = getCategoryIcon(name);
+            const safe = name.replace(/\s+/g, '-').toLowerCase();
             const limit = 6;
-            const hasMore = templates.length > limit;
-            const visibleTemplates = templates.slice(0, limit);
-            const hiddenTemplates = templates.slice(limit);
 
-            const cardsHTML = visibleTemplates.map(createCardHTML).join('');
-            
-            // Hidden container HTML (if needed)
-            let hiddenContainerHTML = '';
-            let btnHTML = '';
-            
-            if (hasMore) {
-                hiddenContainerHTML = `
-                    <div id="${sectionId}-more" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                        ${hiddenTemplates.map(createCardHTML).join('')}
+            const visible = items.slice(0, limit);
+            const hidden = items.slice(limit);
+
+            let html = `
+                <section>
+                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
+                        <div class="p-2 rounded-lg ${icon.style}">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                ${icon.svg}
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900 capitalize">${name}</h2>
                     </div>
-                `;
-                btnHTML = `
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${visible.map(createCardHTML).join('')}
+                    </div>
+            `;
+
+            if (hidden.length) {
+                html += `
+                    <div id="more-${safe}" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                        ${hidden.map(createCardHTML).join('')}
+                    </div>
+
                     <div class="mt-8 text-center">
-                        <button onclick="document.getElementById('${sectionId}-more').classList.remove('hidden'); this.style.display='none';" 
-                            class="inline-flex items-center px-4 py-2 border border-slate-300 shadow-sm text-sm font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 focus:outline-none">
-                            Show ${hiddenTemplates.length} more in ${categoryName}
+                        <button onclick="document.getElementById('more-${safe}').classList.remove('hidden'); this.style.display='none'"
+                                class="inline-flex px-6 py-2 border border-slate-300 rounded-full text-sm text-slate-600 bg-white hover:bg-slate-50 hover:text-brand-600 transition">
+                            Show ${hidden.length} more in ${name}
                         </button>
                     </div>
                 `;
             }
 
-            return `
-                <section class="animate-fade-in">
-                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
-                        <div class="p-2 rounded-lg ${iconData.style}">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                ${iconData.svg}
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 capitalize">${categoryName}</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        ${cardsHTML}
-                    </div>
-                    ${hiddenContainerHTML}
-                    ${btnHTML}
-                </section>
-            `;
+            html += `</section>`;
+            return html;
         }
 
-        function renderPagination(totalItems) {
-            const totalPages = Math.ceil(totalItems / templatesPerPage);
-            if (totalPages <= 1) {
-                els.paginationControls.classList.add('hidden');
-                return;
-            }
+        function organizeAndRenderCategories() {
+            const groups = {};
+
+            allTemplates.forEach(t => {
+                const cat = t.category || 'Everyday & Trending';
+                if (!groups[cat]) groups[cat] = [];
+                groups[cat].push(t);
+            });
+
+            const order = ['Everyday & Trending', 'Administrative & HR', 'Difficult Conversations'];
+            let html = '';
+
+            order.forEach(o => {
+                const key = Object.keys(groups).find(k => k.toLowerCase().includes(o.split(' ')[0].toLowerCase()));
+                if (key) {
+                    html += createCategorySection(key, groups[key]);
+                    delete groups[key];
+                }
+            });
+
+            Object.keys(groups).forEach(k => {
+                html += createCategorySection(k, groups[k]);
+            });
+
+            els.categoriesContainer.innerHTML = html;
+        }
+
+        function renderSearchResults() {
+            const start = (currentPage - 1) * templatesPerPage;
+            const end = start + templatesPerPage;
+
+            const pageItems = currentSearchResults.slice(start, end);
+            els.resultsGrid.innerHTML = pageItems.map(createCardHTML).join('');
+            els.resultsCount.textContent = `Found ${currentSearchResults.length} templates`;
+
+            renderPagination(currentSearchResults.length);
+        }
+
+        function renderPagination(total) {
+            const pages = Math.ceil(total / templatesPerPage);
+            if (pages <= 1) return els.paginationControls.classList.add('hidden');
 
             let html = '';
-            
-            // Prev Button
-            html += `<button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled class="page-btn text-slate-300 cursor-not-allowed"' : 'class="page-btn"'} aria-label="Previous">&larr;</button>`;
-
-            // Page Numbers (Simple logic for now)
-            for (let i = 1; i <= totalPages; i++) {
+            for (let i = 1; i <= pages; i++) {
                 html += `<button onclick="changePage(${i})" class="page-btn ${currentPage === i ? 'active' : ''}">${i}</button>`;
             }
-
-            // Next Button
-            html += `<button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled class="page-btn text-slate-300 cursor-not-allowed"' : 'class="page-btn"'} aria-label="Next">&rarr;</button>`;
 
             els.paginationControls.innerHTML = html;
             els.paginationControls.classList.remove('hidden');
         }
 
-        // --- Core Functions ---
-
-        function renderSearchResults() {
-            const start = (currentPage - 1) * templatesPerPage;
-            const end = start + templatesPerPage;
-            const pageItems = currentSearchResults.slice(start, end);
-
-            els.resultsGrid.innerHTML = pageItems.map(createCardHTML).join('');
-            els.resultsCount.textContent = `Found ${currentSearchResults.length} template${currentSearchResults.length !== 1 ? 's' : ''}`;
-            
-            renderPagination(currentSearchResults.length);
-            
-            // Scroll to top of results if paginating
-            if(window.scrollY > 200) {
-               document.querySelector('header').scrollIntoView({behavior: 'smooth'}); 
-            }
-        }
-
-        window.changePage = function(newPage) {
-            const totalPages = Math.ceil(currentSearchResults.length / templatesPerPage);
-            if (newPage < 1 || newPage > totalPages) return;
-            currentPage = newPage;
+        window.changePage = function(p) {
+            currentPage = p;
             renderSearchResults();
         };
 
-        function performSearch(query) {
-            const q = query.toLowerCase().trim();
+        function performSearch(q) {
+            q = q.toLowerCase().trim();
 
-            if (q.length === 0) {
+            if (!q) {
                 els.categoriesContainer.classList.remove('hidden');
                 els.searchResultsView.classList.add('hidden');
-                els.pageHeading.textContent = "Browse all templates";
+                els.pageHeading.textContent = 'Browse all templates';
                 return;
             }
 
-            // Switch Views
             els.categoriesContainer.classList.add('hidden');
             els.searchResultsView.classList.remove('hidden');
-            els.pageHeading.textContent = `Results for "${query}"`;
-            
-            // Filter
-            currentSearchResults = allTemplates.filter(t => 
-                (t.title && t.title.toLowerCase().includes(q)) || 
-                (t.description && t.description.toLowerCase().includes(q)) ||
-                (t.category && t.category.toLowerCase().includes(q))
+            els.pageHeading.textContent = `Results for "${q}"`;
+
+            currentSearchResults = allTemplates.filter(t =>
+                (t.title || '').toLowerCase().includes(q) ||
+                (t.description || '').toLowerCase().includes(q) ||
+                (t.category || '').toLowerCase().includes(q)
             );
 
-            if (currentSearchResults.length === 0) {
-                els.resultsGrid.innerHTML = '';
-                els.paginationControls.classList.add('hidden');
-                els.noResults.classList.remove('hidden');
-                els.resultsCount.textContent = "Found 0 templates";
-            } else {
-                els.noResults.classList.add('hidden');
-                currentPage = 1;
-                renderSearchResults();
-            }
-        }
-
-        function organizeAndRenderCategories() {
-            // Group by Category
-            const groups = {};
-            
-            // 1. Sort into groups
-            allTemplates.forEach(t => {
-                // Normalize category name, default to 'Everyday' if missing
-                let cat = t.category ? t.category.trim() : 'Everyday & Common';
-                if (!groups[cat]) groups[cat] = [];
-                groups[cat].push(t);
-            });
-
-            // 2. Define Sort Order (Optional: Force specific categories to top)
-            const preferredOrder = ['Everyday & Trending', 'Administrative & HR', 'Difficult Conversations'];
-            
-            // 3. Generate HTML
-            let finalHTML = '';
-            
-            // Render Preferred First
-            preferredOrder.forEach(catName => {
-                // Find matching key (case insensitive check)
-                const key = Object.keys(groups).find(k => k.toLowerCase().includes(catName.toLowerCase().split(' ')[0]));
-                if (key && groups[key]) {
-                    finalHTML += createCategorySection(key, groups[key]);
-                    delete groups[key]; // Remove so we don't render twice
-                }
-            });
-
-            // Render Remaining
-            Object.keys(groups).forEach(catName => {
-                finalHTML += createCategorySection(catName, groups[catName]);
-            });
-
-            els.categoriesContainer.innerHTML = finalHTML;
+            currentPage = 1;
+            renderSearchResults();
         }
 
         async function init() {
             try {
-                // Fetch Data
-                const res = await fetch('/reply/templates.json');
-                if (!res.ok) throw new Error('Failed to load templates');
-                
+                const res = await fetch('/reply/templates.json', { cache: 'no-store' });
                 const data = await res.json();
-                allTemplates = Array.isArray(data) ? data : (data.templates || []);
+                allTemplates = Array.isArray(data) ? data : data.templates || [];
 
-                // Initial Render
                 els.loadingState.classList.add('hidden');
                 organizeAndRenderCategories();
 
-                // Check URL Params for Search
-                const urlParams = new URLSearchParams(window.location.search);
-                const query = urlParams.get('search') || urlParams.get('q');
-                
-                if (query) {
-                    els.searchInput.value = query;
-                    performSearch(query);
+                const params = new URLSearchParams(location.search);
+                const q = params.get('search');
+                if (q) {
+                    els.searchInput.value = q;
+                    performSearch(q);
                 }
-
-            } catch (error) {
-                console.error(error);
-                els.loadingState.innerHTML = `<p class="text-red-500">Error loading templates. Please try refreshing.</p>`;
+            } catch (e) {
+                els.loadingState.innerHTML = '<p class="text-red-500">Failed to load templates.</p>';
             }
         }
 
-        // --- Event Listeners ---
-
-        els.searchForm.addEventListener('submit', (e) => {
+        els.searchForm.addEventListener('submit', e => {
             e.preventDefault();
-            const val = els.searchInput.value;
-            const newUrl = new URL(window.location);
-            newUrl.searchParams.set('search', val);
-            window.history.pushState({}, '', newUrl);
-            performSearch(val);
-        });
-
-        // Live search clear detection
-        els.searchInput.addEventListener('input', (e) => {
-            if (e.target.value === '') {
-                const newUrl = new URL(window.location);
-                newUrl.searchParams.delete('search');
-                newUrl.searchParams.delete('q');
-                window.history.pushState({}, '', newUrl);
-                performSearch('');
-            }
+            const q = els.searchInput.value;
+            history.pushState({}, '', `?search=${q}`);
+            performSearch(q);
         });
 
         els.clearBtn.addEventListener('click', () => {
             els.searchInput.value = '';
-            const newUrl = new URL(window.location);
-            newUrl.searchParams.delete('search');
-            newUrl.searchParams.delete('q');
-            window.history.pushState({}, '', newUrl);
+            history.pushState({}, '', location.pathname);
             performSearch('');
         });
 
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        if(btn && menu) {
-            btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-        }
-
-        // Run
         document.addEventListener('DOMContentLoaded', init);
-
     </script>
 </body>
 </html>
