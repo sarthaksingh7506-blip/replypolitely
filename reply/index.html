@@ -3,375 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Templates Hub | ReplyPolitely</title>
-    <meta name="description" content="Professional email templates for difficult conversations, administrative tasks, and everyday business communication.">
+    <title>Templates Hub | ReplyPolitely</title>
+    
+    <meta name="description" content="Browse our collection of professional email templates for workplace scenarios.">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://replypolitely.site/reply/">
+
+    <!-- ✅ FAVICON & APP ICONS (FIXED) -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- ✅ SOCIAL / SEARCH LOGO FIX -->
+    <meta property="og:site_name" content="ReplyPolitely">
+    <meta property="og:title" content="Templates Hub | ReplyPolitely">
+    <meta property="og:description" content="Professional email templates for workplace communication.">
+    <meta property="og:url" content="https://replypolitely.site/reply/">
+    <meta property="og:image" content="https://replypolitely.site/logo.svg">
+
+    <!-- ✅ GOOGLE BRAND SIGNAL -->
+    <meta name="google-site-verification" content="__ADD_IF_ANY__">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
                     colors: {
-                        slate: { 850: '#1e293b' }
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        slate: {
+                            850: '#1e293b',
+                        }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(2, 132, 199, 0.15)',
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
                     }
                 }
-            },
-            plugins: [
-                function({ addUtilities }) {
-                    addUtilities({
-                        '.line-clamp-2': {
-                            overflow: 'hidden',
-                            display: '-webkit-box',
-                            '-webkit-box-orient': 'vertical',
-                            '-webkit-line-clamp': '2'
-                        }
-                    })
-                }
-            ]
-        }
-    </script>
-
-    <script type="application/ld+json">
-    [
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "ReplyPolitely",
-            "url": "https://replypolitely.site",
-            "logo": "https://replypolitely.site/logo.svg",
-            "sameAs": [
-                "https://twitter.com/replypolitely"
-            ]
-        },
-        {
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Email Templates Hub",
-            "description": "Browse our collection of professional email templates.",
-            "url": "https://replypolitely.site/reply/",
-            "isPartOf": {
-                "@type": "WebSite",
-                "name": "ReplyPolitely",
-                "url": "https://replypolitely.site"
             }
         }
-    ]
     </script>
 
     <style>
-        body {
-            -webkit-font-smoothing: antialiased;
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
         }
-
-        .nav-link {
-            position: relative;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(226, 232, 240, 1);
         }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: #000;
-            transition: width 0.2s;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
+        .glass-card:hover {
+            border-color: #38bdf8;
         }
     </style>
-</head>
+    </head>
+<body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen relative overflow-x-hidden">
 
-<body class="bg-white text-slate-900 flex flex-col min-h-screen">
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-400/20 rounded-full blur-[120px] -z-10 pointer-events-none opacity-60"></div>
 
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-100 z-50 h-16 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-            <div class="flex justify-between items-center h-full">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='/'">
-                    <img
-                        src="/logo.svg"
-                        alt="ReplyPolitely Logo"
-                        class="h-8 w-auto"
-                        onerror="this.style.display='none'; document.getElementById('text-logo').classList.remove('hidden')"
-                    >
-                    <span
-                        id="text-logo"
-                        class="font-bold text-xl tracking-tight hidden md:block"
-                    >
-                        ReplyPolitely
-                    </span>
+    <nav class="sticky top-0 z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-3">
+                    <a href="/" class="flex items-center gap-2 group">
+                        <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 shadow-glow">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <span class="font-bold text-lg tracking-tight text-slate-900">ReplyPolitely</span>
+                    </a>
                 </div>
 
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-slate-900 nav-link transition-colors">
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">
                         Home
                     </a>
-                    <a href="/about" class="text-sm font-medium text-slate-600 hover:text-slate-900 nav-link transition-colors">
-                        About
+                    <a href="/reply/index.html" class="text-sm font-medium text-brand-600">
+                        Templates
                     </a>
-                    <a
-                        href="/login"
-                        class="px-4 py-2 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-all shadow-sm"
-                    >
-                        Get Started
+                    <a href="/about.html" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">
+                        About
                     </a>
                 </div>
 
-                <div class="md:hidden flex items-center">
-                    <button
-                        id="mobile-menu-btn"
-                        class="text-slate-600 hover:text-slate-900 focus:outline-none p-2"
-                    >
-                        <svg
-                            class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn"
+                        class="p-2 rounded-md text-slate-500 hover:bg-slate-100 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div
-            id="mobile-menu"
-            class="hidden md:hidden bg-white border-b border-slate-100 absolute w-full left-0 top-16 shadow-lg"
-        >
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a
-                    href="/"
-                    class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50"
-                >
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="/"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">
                     Home
                 </a>
-                <a
-                    href="/about"
-                    class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50"
-                >
+                <a href="/reply/index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-brand-700 bg-brand-50">
+                    Templates
+                </a>
+                <a href="/about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">
                     About
                 </a>
-              </div>
+            </div>
         </div>
     </nav>
-    <main class="flex-grow pt-24 pb-12">
-        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-            <span
-                class="inline-block py-1 px-3 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-600 mb-6 uppercase tracking-wider"
-            >
-                Template Library
-            </span>
 
-            <h1
-                class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight"
-            >
-                Find the perfect words
-                <br class="hidden sm:block">
-                for any situation.
-            </h1>
+    <main class="flex-grow pb-24">
 
-            <p
-                class="text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed"
-            >
-                Browse our curated collection of professional email templates.
-                Copy, paste, and send with confidence.
-            </p>
-
-            <div class="relative max-w-xl mx-auto group">
-                <div
-                    class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"
-                >
-                    <svg
-                        class="h-5 w-5 text-slate-400 group-focus-within:text-slate-800 transition-colors"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                        />
-                    </svg>
-                </div>
-
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search for 'apology', 'raise', 'intro'..."
-                    class="block w-full pl-11 pr-4 py-4 bg-white border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400 transition-all shadow-sm text-base"
-                    aria-label="Search templates"
-                >
-            </div>
-        </section>
-
-        <div
-            id="content-area"
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 pb-24"
-        >
-
-            <div
-                id="loading"
-                class="text-center py-20"
-            >
-                <div
-                    class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-slate-200 border-t-slate-900"
-                ></div>
-            </div>
-
-            <div
-                id="sections-container"
-                class="hidden space-y-16"
-            >
-            </div>
-
-            <div
-                id="noResults"
-                class="hidden text-center py-12 bg-slate-50 rounded-2xl border border-slate-100"
-            >
-                <p
-                    class="text-slate-600 font-medium"
-                >
-                    No templates found matching your search.
+        <header class="pt-16 pb-12 sm:pt-20 sm:pb-16 px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-3">
+                    Templates Hub
                 </p>
 
-                <button
-                    onclick="resetSearch()"
-                    class="mt-4 text-sm font-bold text-slate-900 underline hover:text-slate-700"
+                <h1 id="page-heading"
+                    class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-8">
+                    Browse all templates
+                </h1>
+
+                <div class="relative max-w-xl mx-auto group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-brand-300 to-indigo-300 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300">
+                    </div>
+
+                    <form id="hub-search-form"
+                        class="relative bg-white rounded-lg shadow-card flex items-center p-1.5 border border-slate-200 focus-within:border-brand-300 focus-within:ring-2 focus-within:ring-brand-100 transition-all">
+                        <div class="pl-3 pr-2 text-slate-400">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <input type="text" id="hub-search-input" name="search"
+                            placeholder="Search templates (e.g. 'Late', 'Salary')"
+                            class="w-full py-2.5 bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400 outline-none"
+                            autocomplete="off">
+                    </form>
+                </div>
+            </div>
+        </header>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div id="categories-view" class="space-y-16">
+                
+                <section>
+                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
+                        <div class="p-2 bg-brand-50 rounded-lg text-brand-600">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900">
+                            Everyday & Trending
+                        </h2>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                        id="cat-everyday-grid"
+                    >
+                        <!-- Auto injected cards -->
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
+                        <div class="p-2 bg-slate-100 rounded-lg text-slate-600">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900">
+                            Administrative & HR
+                        </h2>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                        id="cat-admin-grid"
+                    >
+                        <!-- Auto injected cards -->
+                    </div>
+                </section>
+
+                <section>
+                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
+                        <div class="p-2 bg-red-50 rounded-lg text-red-500">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900">
+                            Difficult Conversations
+                        </h2>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                        id="cat-difficult-grid"
+                    >
+                        <!-- Auto injected cards -->
+                    </div>
+                </section>
+
+            </div>
+
+            <div id="search-results-view" class="hidden">
+                <div class="flex justify-between items-center mb-6">
+                    <p
+                        id="results-count"
+                        class="text-sm text-slate-500 font-medium"
+                    >
+                        Found 0 templates
+                    </p>
+
+                    <button
+                        id="clear-search"
+                        class="text-sm text-brand-600 hover:text-brand-800 font-medium hover:underline"
+                    >
+                        Clear Search
+                    </button>
+                </div>
+
+                <div
+                    id="results-grid"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
-                    Clear Search
-                </button>
+                    <!-- Search results injected here -->
+                </div>
+
+                <div
+                    id="no-results"
+                    class="hidden text-center py-16"
+                >
+                    <div
+                        class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4"
+                    >
+                        <svg class="w-8 h-8 text-slate-400" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="text-lg font-medium text-slate-900">
+                        No matching templates
+                    </h3>
+
+                    <p class="text-slate-500 mt-1">
+                        Try checking your spelling or use a broader keyword.
+                    </p>
+                </div>
             </div>
 
         </div>
     </main>
-    <footer class="bg-white border-t border-slate-100 mt-auto">
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row justify-between items-center"
-        >
-            <div
-                class="flex items-center gap-2 mb-4 md:mb-0"
-            >
-                <img
-                    src="/logo.svg"
-                    alt="ReplyPolitely Logo"
-                    class="h-6 w-auto grayscale opacity-50"
-                >
-
-                <p
-                    class="text-sm text-slate-500"
-                >
-                    &copy; 2025 ReplyPolitely. All rights reserved.
-                </p>
-            </div>
-
-            <div
-                class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm font-medium text-slate-500"
-            >
-                <a
-                    href="/privacy-policy"
-                    class="hover:text-slate-900 transition-colors"
-                >
-                    Privacy Policy
-                </a>
-
-                <a
-                    href="/terms-and-conditions"
-                    class="hover:text-slate-900 transition-colors"
-                >
-                    Terms & Conditions
-                </a>
-
-                <a
-                    href="/disclaimer"
-                    class="hover:text-slate-900 transition-colors"
-                >
-                    Disclaimer
-                </a>
-            </div>
-        </div>
-    </footer>
     <script>
-        // ===============================
-        // GLOBAL DATA STORE
-        // ===============================
-        let allTemplates = [];
+        /* ============================================================
+           AUTO INDEXING + SEARCH LOGIC
+           Data source: /reply/templates.json
+           ============================================================ */
 
-        // ===============================
-        // DOM ELEMENT REFERENCES
-        // ===============================
-        const container = document.getElementById('sections-container');
-        const loading = document.getElementById('loading');
-        const searchInput = document.getElementById('searchInput');
-        const noResults = document.getElementById('noResults');
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        /* ------------------------------
+           GLOBAL STATE
+        ------------------------------ */
+        let templates = [];
 
-        // ===============================
-        // MOBILE NAVIGATION TOGGLE
-        // ===============================
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+        /* ------------------------------
+           DOM REFERENCES
+        ------------------------------ */
+        const searchForm = document.getElementById('hub-search-form');
+        const searchInput = document.getElementById('hub-search-input');
+
+        const categoriesView = document.getElementById('categories-view');
+        const searchResultsView = document.getElementById('search-results-view');
+
+        const everydayGrid = document.getElementById('cat-everyday-grid');
+        const adminGrid = document.getElementById('cat-admin-grid');
+        const difficultGrid = document.getElementById('cat-difficult-grid');
+
+        const resultsGrid = document.getElementById('results-grid');
+        const resultsCount = document.getElementById('results-count');
+        const noResults = document.getElementById('no-results');
+        const clearBtn = document.getElementById('clear-search');
+
+        const pageHeading = document.getElementById('page-heading');
+
+        /* ------------------------------
+           CARD TEMPLATE (UNCHANGED UI)
+        ------------------------------ */
+        function createCard(template) {
+            return `
+                <a href="/reply/${template.slug}" class="group block h-full">
+                    <div class="glass-card rounded-xl p-6 h-full transition-all duration-300 group-hover:shadow-glow group-hover:-translate-y-1 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-slate-200 group-hover:bg-brand-500 transition-colors"></div>
+
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">
+                            ${escapeHtml(template.title)}
+                        </h3>
+
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
+                            ${escapeHtml(template.description || 'Professional email template')}
+                        </p>
+
+                        <span class="text-xs font-semibold text-brand-600 flex items-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
+                            Use Template &rarr;
+                        </span>
+                    </div>
+                </a>
+            `;
         }
 
-        // ===============================
-        // INITIALIZATION
-        // ===============================
-        async function init() {
-            try {
-                const response = await fetch('/reply/templates.json', {
-                    cache: 'no-store'
-                });
-
-                if (!response.ok) {
-                    throw new Error('Templates JSON not found');
-                }
-
-                const data = await response.json();
-
-                if (!Array.isArray(data)) {
-                    throw new Error('Invalid templates.json format');
-                }
-
-                allTemplates = data;
-
-                // Sort alphabetically by title
-                allTemplates.sort((a, b) => {
-                    return (a.title || '').localeCompare(b.title || '');
-                });
-
-                loading.classList.add('hidden');
-                container.classList.remove('hidden');
-
-                renderGrouped(allTemplates);
-            } catch (error) {
-                console.error(error);
-                loading.innerHTML =
-                    '<p class="text-red-500 font-medium">Failed to load templates.</p>';
-            }
-        }
-
-        // ===============================
-        // CATEGORY DETECTION LOGIC
-        // ===============================
+        /* ------------------------------
+           CATEGORY CLASSIFIER
+        ------------------------------ */
         function getCategory(template) {
             const text = (
                 (template.title || '') +
@@ -379,193 +360,137 @@
                 (template.description || '')
             ).toLowerCase();
 
-            // Difficult conversations
             if (
-                text.match(
-                    /apology|apologize|decline|reject|no|resign|quit|complaint|refund|breakup|difficult/
-                )
+                text.match(/apology|apologize|decline|reject|no|resign|quit|complaint|refund|breakup|difficult/)
             ) {
-                return 'Difficult Conversations';
+                return 'difficult';
             }
 
-            // Administrative / HR
             if (
-                text.match(
-                    /invoice|payment|schedule|meeting|agenda|leave|vacation|sick|out of office|admin/
-                )
+                text.match(/invoice|payment|schedule|meeting|agenda|leave|vacation|sick|out of office|admin/)
             ) {
-                return 'Administrative & HR';
+                return 'admin';
             }
 
-            // Default
-            return 'Everyday & Trending';
+            return 'everyday';
         }
 
-        // ===============================
-        // MAIN RENDER FUNCTION
-        // ===============================
-        function renderGrouped(templates) {
-            container.innerHTML = '';
-
-            if (!templates || templates.length === 0) {
-                container.classList.add('hidden');
-                noResults.classList.remove('hidden');
-                return;
-            }
-
-            noResults.classList.add('hidden');
-            container.classList.remove('hidden');
-
-            const groups = {
-                'Everyday & Trending': [],
-                'Difficult Conversations': [],
-                'Administrative & HR': []
-            };
+        /* ------------------------------
+           RENDER CATEGORIES
+        ------------------------------ */
+        function renderCategories() {
+            everydayGrid.innerHTML = '';
+            adminGrid.innerHTML = '';
+            difficultGrid.innerHTML = '';
 
             templates.forEach(template => {
                 const category = getCategory(template);
-                if (groups[category]) {
-                    groups[category].push(template);
-                } else {
-                    groups['Everyday & Trending'].push(template);
-                }
-            });
 
-            Object.keys(groups).forEach(groupName => {
-                if (groups[groupName].length > 0) {
-                    const sectionHTML = createSectionHTML(
-                        groupName,
-                        groups[groupName]
-                    );
-                    container.insertAdjacentHTML('beforeend', sectionHTML);
+                if (category === 'everyday') {
+                    everydayGrid.insertAdjacentHTML('beforeend', createCard(template));
+                } else if (category === 'admin') {
+                    adminGrid.insertAdjacentHTML('beforeend', createCard(template));
+                } else if (category === 'difficult') {
+                    difficultGrid.insertAdjacentHTML('beforeend', createCard(template));
                 }
             });
         }
 
-        // ===============================
-        // SECTION HTML BUILDER
-        // ===============================
-        function createSectionHTML(title, items) {
-            const cardsHTML = items
-                .map(template => {
-                    return `
-                        <a
-                            href="/reply/${template.slug}"
-                            class="group block p-6 bg-white border border-slate-200 rounded-xl hover:border-slate-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
-                        >
-                            <div class="flex flex-col h-full">
-                                <div class="mb-3">
-                                    <span
-                                        class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-slate-100 text-slate-600 group-hover:bg-slate-900 group-hover:text-white transition-colors"
-                                    >
-                                        <svg
-                                            class="h-4 w-4"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                stroke-width="2"
-                                                d="M13 10V3L4 14h7v7l9-11h-7z"
-                                            />
-                                        </svg>
-                                    </span>
-                                </div>
+        /* ------------------------------
+           SEARCH FUNCTION
+        ------------------------------ */
+        function performSearch(query) {
+            const q = query.toLowerCase().trim();
 
-                                <h3
-                                    class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors"
-                                >
-                                    ${escapeHtml(template.title)}
-                                </h3>
-
-                                <p
-                                    class="text-sm text-slate-500 line-clamp-2 leading-relaxed mb-4 flex-grow"
-                                >
-                                    ${escapeHtml(
-                                        template.description ||
-                                            'View this email template...'
-                                    )}
-                                </p>
-
-                                <div
-                                    class="flex items-center text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-colors"
-                                >
-                                    Use Template
-                                    <span
-                                        class="ml-1 transition-transform group-hover:translate-x-1"
-                                    >
-                                        &rarr;
-                                    </span>
-                                </div>
-                            </div>
-                        </a>
-                    `;
-                })
-                .join('');
-
-            return `
-                <section>
-                    <div
-                        class="flex items-center gap-3 mb-6 border-b border-slate-100 pb-2"
-                    >
-                        <h2
-                            class="text-2xl font-bold text-slate-900 tracking-tight"
-                        >
-                            ${title}
-                        </h2>
-                        <span
-                            class="text-xs font-semibold bg-slate-100 text-slate-600 px-2 py-1 rounded-full"
-                        >
-                            ${items.length}
-                        </span>
-                    </div>
-
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                    >
-                        ${cardsHTML}
-                    </div>
-                </section>
-            `;
-        }
-
-        // ===============================
-        // SEARCH HANDLER
-        // ===============================
-        if (searchInput) {
-            searchInput.addEventListener('input', event => {
-                const term = event.target.value.toLowerCase();
-
-                const filtered = allTemplates.filter(template => {
-                    return (
-                        (template.title &&
-                            template.title.toLowerCase().includes(term)) ||
-                        (template.description &&
-                            template.description
-                                .toLowerCase()
-                                .includes(term))
-                    );
-                });
-
-                renderGrouped(filtered);
-            });
-        }
-
-        // ===============================
-        // RESET SEARCH
-        // ===============================
-        function resetSearch() {
-            if (searchInput) {
-                searchInput.value = '';
+            if (q.length === 0) {
+                categoriesView.classList.remove('hidden');
+                searchResultsView.classList.add('hidden');
+                pageHeading.textContent = 'Browse all templates';
+                return;
             }
-            renderGrouped(allTemplates);
+
+            categoriesView.classList.add('hidden');
+            searchResultsView.classList.remove('hidden');
+            pageHeading.textContent = `Results for "${query}"`;
+
+            const matches = templates.filter(t =>
+                (t.title && t.title.toLowerCase().includes(q)) ||
+                (t.description && t.description.toLowerCase().includes(q)) ||
+                (t.slug && t.slug.toLowerCase().includes(q))
+            );
+
+            resultsGrid.innerHTML = matches.map(createCard).join('');
+            resultsCount.textContent = `Found ${matches.length} template${matches.length !== 1 ? 's' : ''}`;
+
+            if (matches.length === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
         }
 
-        // ===============================
-        // HTML ESCAPE (XSS PROTECTION)
-        // ===============================
+        /* ------------------------------
+           FETCH AUTO INDEX
+        ------------------------------ */
+        async function loadTemplates() {
+            try {
+                const res = await fetch('/reply/templates.json', { cache: 'no-store' });
+                if (!res.ok) throw new Error('templates.json not found');
+
+                const data = await res.json();
+                if (!Array.isArray(data)) throw new Error('Invalid templates.json');
+
+                templates = data;
+
+                renderCategories();
+
+                const params = new URLSearchParams(window.location.search);
+                const q = params.get('search') || params.get('q');
+                if (q) {
+                    searchInput.value = q;
+                    performSearch(q);
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        /* ------------------------------
+           EVENTS
+        ------------------------------ */
+        searchForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const val = searchInput.value.trim();
+
+            const url = new URL(window.location);
+            url.searchParams.set('search', val);
+            window.history.pushState({}, '', url);
+
+            performSearch(val);
+        });
+
+        searchInput.addEventListener('input', e => {
+            if (e.target.value === '') {
+                const url = new URL(window.location);
+                url.searchParams.delete('search');
+                url.searchParams.delete('q');
+                window.history.pushState({}, '', url);
+                performSearch('');
+            }
+        });
+
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            const url = new URL(window.location);
+            url.searchParams.delete('search');
+            url.searchParams.delete('q');
+            window.history.pushState({}, '', url);
+            performSearch('');
+        });
+
+        /* ------------------------------
+           ESCAPE HTML (SECURITY)
+        ------------------------------ */
         function escapeHtml(text) {
             if (!text) return '';
             return text
@@ -576,8 +501,8 @@
                 .replace(/'/g, '&#039;');
         }
 
-        // ===============================
-        // RUN ON LOAD
-        // ===============================
-        document.addEventListener('DOMContentLoaded', init);
-                </script>
+        /* ------------------------------
+           INIT
+        ------------------------------ */
+        document.addEventListener('DOMContentLoaded', loadTemplates);
+                                     </script>
