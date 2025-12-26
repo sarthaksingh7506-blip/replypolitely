@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Templates Hub | ReplyPolitely</title>
     
-    <meta name="description" content="Browse our collection of professional email templates for workplace scenarios.">
+    <meta name="description" content="Browse our collection of professional email templates for workplace scenarios. Save time and communicate with authority.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://replypolitely.site/reply/">
 
-    <!-- ✅ FAVICON & APP ICONS (FIXED) -->
+    <!-- FAVICONS -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon-32x32.png" type="image/png">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- ✅ SOCIAL / SEARCH LOGO FIX -->
+    <!-- OPEN GRAPH -->
     <meta property="og:site_name" content="ReplyPolitely">
     <meta property="og:title" content="Templates Hub | ReplyPolitely">
     <meta property="og:description" content="Professional email templates for workplace communication.">
     <meta property="og:url" content="https://replypolitely.site/reply/">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="https://replypolitely.site/logo.svg">
 
-    <!-- ✅ GOOGLE BRAND SIGNAL -->
-    <meta name="google-site-verification" content="__ADD_IF_ANY__">
-
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -60,6 +61,22 @@
         }
     </script>
 
+    <!-- WEBSITE STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ReplyPolitely",
+      "url": "https://replypolitely.site",
+      "logo": "https://replypolitely.site/logo.svg",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://replypolitely.site/reply/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <style>
         .glass {
             background: rgba(255, 255, 255, 0.7);
@@ -74,8 +91,26 @@
         .glass-card:hover {
             border-color: #38bdf8;
         }
+        .page-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .page-btn.active {
+            background-color: #0ea5e9;
+            color: white;
+        }
+        .page-btn:not(.active):hover {
+            background-color: #f1f5f9;
+            color: #0ea5e9;
+        }
     </style>
-    </head>
+</head>
 <body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen relative overflow-x-hidden">
 
     <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-400/20 rounded-full blur-[120px] -z-10 pointer-events-none opacity-60"></div>
@@ -85,7 +120,8 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-3">
                     <a href="/" class="flex items-center gap-2 group">
-                        <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 shadow-glow">
+                        <img src="/logo.svg" alt="ReplyPolitely Logo" class="w-8 h-8 rounded-lg shadow-glow" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="w-8 h-8 rounded-lg bg-brand-100 hidden items-center justify-center text-brand-600 shadow-glow">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -96,20 +132,13 @@
                 </div>
 
                 <div class="hidden md:flex space-x-8">
-                    <a href="/" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">
-                        Home
-                    </a>
-                    <a href="/reply/index.html" class="text-sm font-medium text-brand-600">
-                        Templates
-                    </a>
-                    <a href="/about.html" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">
-                        About
-                    </a>
+                    <a href="/" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">Home</a>
+                    <a href="/reply/index.html" class="text-sm font-medium text-brand-600">Templates</a>
+                    <a href="/about.html" class="text-sm font-medium text-slate-500 hover:text-brand-600 transition-colors">About</a>
                 </div>
 
                 <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn"
-                        class="p-2 rounded-md text-slate-500 hover:bg-slate-100 focus:outline-none">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-500 hover:bg-slate-100 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
@@ -119,21 +148,11 @@
             </div>
         </div>
 
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200">
             <div class="px-4 pt-2 pb-4 space-y-2">
-                <a href="/"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">
-                    Home
-                </a>
-                <a href="/reply/index.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-brand-700 bg-brand-50">
-                    Templates
-                </a>
-                <a href="/about.html"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">
-                    About
-                </a>
+                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Home</a>
+                <a href="/reply/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-brand-700 bg-brand-50">Templates</a>
+                <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">About</a>
             </div>
         </div>
     </nav>
@@ -142,31 +161,22 @@
 
         <header class="pt-16 pb-12 sm:pt-20 sm:pb-16 px-4">
             <div class="max-w-3xl mx-auto text-center">
-                <p class="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-3">
-                    Templates Hub
-                </p>
-
-                <h1 id="page-heading"
-                    class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-8">
+                <p class="text-xs font-semibold text-brand-600 uppercase tracking-widest mb-3">Templates Hub</p>
+                <h1 id="page-heading" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-8">
                     Browse all templates
                 </h1>
 
                 <div class="relative max-w-xl mx-auto group">
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-brand-300 to-indigo-300 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300">
-                    </div>
-
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-300 to-indigo-300 rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300"></div>
                     <form id="hub-search-form"
                         class="relative bg-white rounded-lg shadow-card flex items-center p-1.5 border border-slate-200 focus-within:border-brand-300 focus-within:ring-2 focus-within:ring-brand-100 transition-all">
                         <div class="pl-3 pr-2 text-slate-400">
                             <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
-                                </path>
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                             </svg>
                         </div>
-
                         <input type="text" id="hub-search-input" name="search"
                             placeholder="Search templates (e.g. 'Late', 'Salary')"
                             class="w-full py-2.5 bg-transparent border-none focus:ring-0 text-slate-900 placeholder-slate-400 outline-none"
@@ -177,82 +187,13 @@
         </header>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div id="categories-view" class="space-y-16">
-                
-                <section>
-                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
-                        <div class="p-2 bg-brand-50 rounded-lg text-brand-600">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900">
-                            Everyday & Trending
-                        </h2>
-                    </div>
-
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                        id="cat-everyday-grid"
-                    >
-                        <!-- Auto injected cards -->
-                    </div>
-                </section>
-
-                <section>
-                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
-                        <div class="p-2 bg-slate-100 rounded-lg text-slate-600">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900">
-                            Administrative & HR
-                        </h2>
-                    </div>
-
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                        id="cat-admin-grid"
-                    >
-                        <!-- Auto injected cards -->
-                    </div>
-                </section>
-
-                <section>
-                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
-                        <div class="p-2 bg-red-50 rounded-lg text-red-500">
-                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                            </svg>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900">
-                            Difficult Conversations
-                        </h2>
-                    </div>
-
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-                        id="cat-difficult-grid"
-                    >
-                        <!-- Auto injected cards -->
-                    </div>
-                </section>
-
-            </div>
+            <div id="categories-container" class="space-y-16"></div>
 
             <div id="search-results-view" class="hidden">
-                <div class="flex justify-between items-center mb-6">
-                    <p
-                        id="results-count"
-                        class="text-sm text-slate-500 font-medium"
-                    >
+                <div class="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
+                    <p id="results-count" class="text-sm text-slate-500 font-medium">
                         Found 0 templates
                     </p>
-
                     <button
                         id="clear-search"
                         class="text-sm text-brand-600 hover:text-brand-800 font-medium hover:underline"
@@ -263,9 +204,14 @@
 
                 <div
                     id="results-grid"
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
                 >
-                    <!-- Search results injected here -->
+                </div>
+
+                <div
+                    id="pagination-controls"
+                    class="hidden flex justify-center gap-2"
+                >
                 </div>
 
                 <div
@@ -275,10 +221,18 @@
                     <div
                         class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4"
                     >
-                        <svg class="w-8 h-8 text-slate-400" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <svg
+                            class="w-8 h-8 text-slate-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
                         </svg>
                     </div>
 
@@ -292,217 +246,226 @@
                 </div>
             </div>
 
+            <div
+                id="loading-state"
+                class="py-20 text-center"
+            >
+                <div
+                    class="inline-block w-8 h-8 border-4 border-brand-100 border-t-brand-600 rounded-full animate-spin"
+                ></div>
+
+                <p class="mt-4 text-slate-500 text-sm">
+                    Loading templates library...
+                </p>
+            </div>
+
         </div>
     </main>
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col items-center md:items-start">
+                <span class="text-slate-900 font-bold tracking-tight mb-1">
+                    ReplyPolitely
+                </span>
+                <p class="text-xs text-slate-500">
+                    &copy; 2025 ReplyPolitely.site. All rights reserved.
+                </p>
+            </div>
+
+            <div class="flex gap-8 text-sm text-slate-500">
+                <a
+                    href="/terms.html"
+                    class="hover:text-slate-900 transition-colors"
+                >
+                    Terms
+                </a>
+                <a
+                    href="/privacy.html"
+                    class="hover:text-slate-900 transition-colors"
+                >
+                    Privacy
+                </a>
+                <a
+                    href="/disclaimer.html"
+                    class="hover:text-slate-900 transition-colors"
+                >
+                    Disclaimer
+                </a>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        /* ============================================================
-           AUTO INDEXING + SEARCH LOGIC
-           Data source: /reply/templates.json
-           ============================================================ */
+        /**
+         * ReplyPolitely Templates Engine
+         * Auto Indexing + Categories + Search + Pagination
+         */
 
-        /* ------------------------------
-           GLOBAL STATE
-        ------------------------------ */
-        let templates = [];
+        let allTemplates = [];
+        const templatesPerPage = 9;
+        let currentPage = 1;
+        let currentSearchResults = [];
 
-        /* ------------------------------
-           DOM REFERENCES
-        ------------------------------ */
-        const searchForm = document.getElementById('hub-search-form');
-        const searchInput = document.getElementById('hub-search-input');
+        const els = {
+            searchForm: document.getElementById('hub-search-form'),
+            searchInput: document.getElementById('hub-search-input'),
+            categoriesContainer: document.getElementById('categories-container'),
+            searchResultsView: document.getElementById('search-results-view'),
+            resultsGrid: document.getElementById('results-grid'),
+            resultsCount: document.getElementById('results-count'),
+            paginationControls: document.getElementById('pagination-controls'),
+            noResults: document.getElementById('no-results'),
+            loadingState: document.getElementById('loading-state'),
+            pageHeading: document.getElementById('page-heading'),
+            clearBtn: document.getElementById('clear-search')
+        };
 
-        const categoriesView = document.getElementById('categories-view');
-        const searchResultsView = document.getElementById('search-results-view');
+        function getCategoryIcon(categoryName) {
+            const name = categoryName.toLowerCase();
 
-        const everydayGrid = document.getElementById('cat-everyday-grid');
-        const adminGrid = document.getElementById('cat-admin-grid');
-        const difficultGrid = document.getElementById('cat-difficult-grid');
+            const icons = {
+                warning: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />',
+                briefcase: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />',
+                chat: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />'
+            };
 
-        const resultsGrid = document.getElementById('results-grid');
-        const resultsCount = document.getElementById('results-count');
-        const noResults = document.getElementById('no-results');
-        const clearBtn = document.getElementById('clear-search');
+            if (name.includes('difficult') || name.includes('apology')) {
+                return { svg: icons.warning, style: 'text-red-500 bg-red-50' };
+            }
 
-        const pageHeading = document.getElementById('page-heading');
+            if (name.includes('admin') || name.includes('hr')) {
+                return { svg: icons.briefcase, style: 'text-slate-600 bg-slate-100' };
+            }
 
-        /* ------------------------------
-           CARD TEMPLATE (UNCHANGED UI)
-        ------------------------------ */
-        function createCard(template) {
+            return { svg: icons.chat, style: 'text-brand-600 bg-brand-50' };
+        }
+
+        function createCardHTML(t) {
+            const title = t.title || 'Untitled Template';
+            const desc = t.description || 'Professional email template for this situation.';
+            const url = t.slug ? `/reply/${t.slug}` : '#';
+
             return `
-                <a href="/reply/${template.slug}" class="group block h-full">
-                    <div class="glass-card rounded-xl p-6 h-full transition-all duration-300 group-hover:shadow-glow group-hover:-translate-y-1 relative overflow-hidden">
+                <a href="${url}" class="group block h-full">
+                    <div class="glass-card rounded-xl p-6 h-full transition-all duration-300 group-hover:shadow-glow group-hover:-translate-y-1 relative overflow-hidden flex flex-col">
                         <div class="absolute top-0 left-0 w-1 h-full bg-slate-200 group-hover:bg-brand-500 transition-colors"></div>
-
-                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors">
-                            ${escapeHtml(template.title)}
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors line-clamp-1">
+                            ${title}
                         </h3>
-
-                        <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                            ${escapeHtml(template.description || 'Professional email template')}
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            ${desc}
                         </p>
-
-                        <span class="text-xs font-semibold text-brand-600 flex items-center opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                            Use Template &rarr;
+                        <span class="text-xs font-semibold text-brand-600 mt-auto opacity-0 group-hover:opacity-100 transition-opacity">
+                            Use Template →
                         </span>
                     </div>
                 </a>
             `;
         }
 
-        /* ------------------------------
-           CATEGORY CLASSIFIER
-        ------------------------------ */
-        function getCategory(template) {
-            const text = (
-                (template.title || '') +
-                ' ' +
-                (template.description || '')
-            ).toLowerCase();
+        function createCategorySection(name, items) {
+            const icon = getCategoryIcon(name);
 
-            if (
-                text.match(/apology|apologize|decline|reject|no|resign|quit|complaint|refund|breakup|difficult/)
-            ) {
-                return 'difficult';
-            }
+            return `
+                <section>
+                    <div class="flex items-center gap-3 mb-6 border-b border-slate-200 pb-3">
+                        <div class="p-2 rounded-lg ${icon.style}">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                ${icon.svg}
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold text-slate-900">
+                            ${name}
+                        </h2>
+                    </div>
 
-            if (
-                text.match(/invoice|payment|schedule|meeting|agenda|leave|vacation|sick|out of office|admin/)
-            ) {
-                return 'admin';
-            }
-
-            return 'everyday';
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${items.map(createCardHTML).join('')}
+                    </div>
+                </section>
+            `;
         }
 
-        /* ------------------------------
-           RENDER CATEGORIES
-        ------------------------------ */
-        function renderCategories() {
-            everydayGrid.innerHTML = '';
-            adminGrid.innerHTML = '';
-            difficultGrid.innerHTML = '';
+        function organizeAndRenderCategories() {
+            const groups = {};
 
-            templates.forEach(template => {
-                const category = getCategory(template);
-
-                if (category === 'everyday') {
-                    everydayGrid.insertAdjacentHTML('beforeend', createCard(template));
-                } else if (category === 'admin') {
-                    adminGrid.insertAdjacentHTML('beforeend', createCard(template));
-                } else if (category === 'difficult') {
-                    difficultGrid.insertAdjacentHTML('beforeend', createCard(template));
-                }
+            allTemplates.forEach(t => {
+                const cat = t.category || 'Everyday & Trending';
+                if (!groups[cat]) groups[cat] = [];
+                groups[cat].push(t);
             });
+
+            let html = '';
+            Object.keys(groups).forEach(cat => {
+                html += createCategorySection(cat, groups[cat]);
+            });
+
+            els.categoriesContainer.innerHTML = html;
         }
 
-        /* ------------------------------
-           SEARCH FUNCTION
-        ------------------------------ */
         function performSearch(query) {
             const q = query.toLowerCase().trim();
 
-            if (q.length === 0) {
-                categoriesView.classList.remove('hidden');
-                searchResultsView.classList.add('hidden');
-                pageHeading.textContent = 'Browse all templates';
+            if (!q) {
+                els.categoriesContainer.classList.remove('hidden');
+                els.searchResultsView.classList.add('hidden');
+                els.pageHeading.textContent = 'Browse all templates';
                 return;
             }
 
-            categoriesView.classList.add('hidden');
-            searchResultsView.classList.remove('hidden');
-            pageHeading.textContent = `Results for "${query}"`;
+            els.categoriesContainer.classList.add('hidden');
+            els.searchResultsView.classList.remove('hidden');
+            els.pageHeading.textContent = `Results for "${query}"`;
 
-            const matches = templates.filter(t =>
-                (t.title && t.title.toLowerCase().includes(q)) ||
-                (t.description && t.description.toLowerCase().includes(q)) ||
-                (t.slug && t.slug.toLowerCase().includes(q))
+            currentSearchResults = allTemplates.filter(t =>
+                (t.title || '').toLowerCase().includes(q) ||
+                (t.description || '').toLowerCase().includes(q)
             );
 
-            resultsGrid.innerHTML = matches.map(createCard).join('');
-            resultsCount.textContent = `Found ${matches.length} template${matches.length !== 1 ? 's' : ''}`;
-
-            if (matches.length === 0) {
-                noResults.classList.remove('hidden');
-            } else {
-                noResults.classList.add('hidden');
-            }
+            els.resultsGrid.innerHTML = currentSearchResults.map(createCardHTML).join('');
+            els.resultsCount.textContent = `Found ${currentSearchResults.length} templates`;
         }
 
-        /* ------------------------------
-           FETCH AUTO INDEX
-        ------------------------------ */
-        async function loadTemplates() {
+        async function init() {
             try {
                 const res = await fetch('/reply/templates.json', { cache: 'no-store' });
-                if (!res.ok) throw new Error('templates.json not found');
-
                 const data = await res.json();
-                if (!Array.isArray(data)) throw new Error('Invalid templates.json');
 
-                templates = data;
+                allTemplates = Array.isArray(data) ? data : [];
+                els.loadingState.classList.add('hidden');
 
-                renderCategories();
+                organizeAndRenderCategories();
 
                 const params = new URLSearchParams(window.location.search);
-                const q = params.get('search') || params.get('q');
+                const q = params.get('search');
                 if (q) {
-                    searchInput.value = q;
+                    els.searchInput.value = q;
                     performSearch(q);
                 }
-            } catch (err) {
-                console.error(err);
+            } catch (e) {
+                els.loadingState.innerHTML =
+                    '<p class="text-red-500">Failed to load templates.</p>';
             }
         }
 
-        /* ------------------------------
-           EVENTS
-        ------------------------------ */
-        searchForm.addEventListener('submit', e => {
+        els.searchForm.addEventListener('submit', e => {
             e.preventDefault();
-            const val = searchInput.value.trim();
-
+            const val = els.searchInput.value;
             const url = new URL(window.location);
             url.searchParams.set('search', val);
-            window.history.pushState({}, '', url);
-
+            history.pushState({}, '', url);
             performSearch(val);
         });
 
-        searchInput.addEventListener('input', e => {
-            if (e.target.value === '') {
-                const url = new URL(window.location);
-                url.searchParams.delete('search');
-                url.searchParams.delete('q');
-                window.history.pushState({}, '', url);
-                performSearch('');
-            }
-        });
-
-        clearBtn.addEventListener('click', () => {
-            searchInput.value = '';
+        els.clearBtn.addEventListener('click', () => {
+            els.searchInput.value = '';
             const url = new URL(window.location);
             url.searchParams.delete('search');
-            url.searchParams.delete('q');
-            window.history.pushState({}, '', url);
+            history.pushState({}, '', url);
             performSearch('');
         });
 
-        /* ------------------------------
-           ESCAPE HTML (SECURITY)
-        ------------------------------ */
-        function escapeHtml(text) {
-            if (!text) return '';
-            return text
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#039;');
-        }
-
-        /* ------------------------------
-           INIT
-        ------------------------------ */
-        document.addEventListener('DOMContentLoaded', loadTemplates);
-                                     </script>
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
