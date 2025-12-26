@@ -196,10 +196,10 @@
                 </div>
 
                 <div id="results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    </div>
+                </div>
 
                 <div id="pagination-controls" class="hidden flex justify-center gap-2">
-                    </div>
+                </div>
 
                 <div id="no-results" class="hidden text-center py-16">
                     <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -238,16 +238,16 @@
     <script>
         /**
          * ReplyPolitely Templates Engine
-         * Features: Dynamic Categorization, "Show More" expansion, Live Search, Pagination
+         * Handles: Auto-indexing, Categories, Show More Logic, Search Pagination
          */
 
-        // State
+        // STATE
         let allTemplates = [];
-        const templatesPerPage = 9; // For search pagination
+        const templatesPerPage = 9; // Max items per search page
         let currentPage = 1;
         let currentSearchResults = [];
 
-        // DOM Elements
+        // DOM ELEMENTS
         const els = {
             searchForm: document.getElementById('hub-search-form'),
             searchInput: document.getElementById('hub-search-input'),
@@ -262,37 +262,37 @@
             clearBtn: document.getElementById('clear-search')
         };
 
-        // Icon Mapping for Categories
+        // ICON MAPPING
         function getCategoryIcon(categoryName) {
             const name = categoryName.toLowerCase();
             const colors = {
                 red: 'text-red-500 bg-red-50',
                 slate: 'text-slate-600 bg-slate-100',
                 brand: 'text-brand-600 bg-brand-50',
-                indigo: 'text-indigo-600 bg-indigo-50',
-                emerald: 'text-emerald-600 bg-emerald-50'
+                green: 'text-emerald-600 bg-emerald-50',
+                indigo: 'text-indigo-600 bg-indigo-50'
             };
 
             const paths = {
                 warning: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />',
                 briefcase: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />',
                 chat: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />',
-                clock: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />',
-                check: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />'
+                check: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />',
+                clock: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />'
             };
 
             if (name.includes('difficult') || name.includes('apology')) return { svg: paths.warning, style: colors.red };
             if (name.includes('admin') || name.includes('hr')) return { svg: paths.briefcase, style: colors.slate };
-            if (name.includes('meeting') || name.includes('schedul')) return { svg: paths.clock, style: colors.indigo };
-            if (name.includes('approv') || name.includes('confirm')) return { svg: paths.check, style: colors.emerald };
-            
+            if (name.includes('approv') || name.includes('confirm')) return { svg: paths.check, style: colors.green };
+            if (name.includes('meet') || name.includes('schedul')) return { svg: paths.clock, style: colors.indigo };
+
             return { svg: paths.chat, style: colors.brand };
         }
 
-        // Generate Card HTML
+        // GENERATE CARD HTML
         function createCardHTML(t) {
             const title = t.title || 'Untitled Template';
-            const desc = t.description || 'Use this template to communicate clearly and professionally in this scenario.';
+            const desc = t.description || 'Professional email template for this situation.';
             const url = t.slug ? `/reply/${t.slug}` : '#';
 
             return `
@@ -313,32 +313,31 @@
             `;
         }
 
-        // Render Categories with "Show More" Logic
+        // RENDER CATEGORY SECTION (With "Show More" Logic)
         function createCategorySection(name, items) {
             const icon = getCategoryIcon(name);
-            const safeName = name.replace(/\s+/g, '-').toLowerCase();
+            const safeID = name.replace(/\s+/g, '-').toLowerCase();
             const limit = 6;
             
-            // Logic to split items
             const visibleItems = items.slice(0, limit);
             const hiddenItems = items.slice(limit);
             const hasMore = hiddenItems.length > 0;
 
-            const cardsHTML = visibleItems.map(createCardHTML).join('');
+            const visibleCards = visibleItems.map(createCardHTML).join('');
             
-            // Hidden Container HTML
-            let hiddenHTML = '';
-            let buttonHTML = '';
+            // Logic for hidden cards
+            let hiddenContainer = '';
+            let showMoreBtn = '';
 
             if (hasMore) {
-                hiddenHTML = `
-                    <div id="more-${safeName}" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                hiddenContainer = `
+                    <div id="more-${safeID}" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                         ${hiddenItems.map(createCardHTML).join('')}
                     </div>
                 `;
-                buttonHTML = `
+                showMoreBtn = `
                     <div class="mt-8 text-center">
-                        <button onclick="document.getElementById('more-${safeName}').classList.remove('hidden'); this.style.display='none'" 
+                        <button onclick="document.getElementById('more-${safeID}').classList.remove('hidden'); this.style.display='none'" 
                             class="inline-flex items-center px-6 py-2 border border-slate-300 shadow-sm text-sm font-medium rounded-full text-slate-600 bg-white hover:bg-slate-50 hover:text-brand-600 transition-colors">
                             Show ${hiddenItems.length} more in ${name}
                         </button>
@@ -354,36 +353,36 @@
                                 ${icon.svg}
                             </svg>
                         </div>
-                        <h2 class="text-xl font-bold text-slate-900 capitalize">${name}</h2>
+                        <h2 class="text-xl font-bold text-slate-900 capitalize">
+                            ${name}
+                        </h2>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        ${cardsHTML}
+                        ${visibleCards}
                     </div>
-                    ${hiddenHTML}
-                    ${buttonHTML}
+                    ${hiddenContainer}
+                    ${showMoreBtn}
                 </section>
             `;
         }
 
         function organizeAndRenderCategories() {
             const groups = {};
-            
-            // Sort templates into groups
+
+            // Group templates
             allTemplates.forEach(t => {
                 const cat = t.category || 'Everyday & Trending';
                 if (!groups[cat]) groups[cat] = [];
                 groups[cat].push(t);
             });
 
-            // Define custom order for top categories if desired
+            // Optional: Define a preferred order for top categories
             const order = ['Everyday & Trending', 'Administrative & HR', 'Difficult Conversations'];
-            
             let html = '';
-            
-            // Render specific ordered categories first
+
+            // Render preferred first
             order.forEach(cat => {
-                // Approximate match for flexible JSON naming
                 const key = Object.keys(groups).find(k => k.toLowerCase().includes(cat.split(' ')[0].toLowerCase()));
                 if(key && groups[key]) {
                     html += createCategorySection(key, groups[key]);
@@ -391,7 +390,7 @@
                 }
             });
 
-            // Render remaining categories
+            // Render remaining
             Object.keys(groups).forEach(cat => {
                 html += createCategorySection(cat, groups[cat]);
             });
@@ -399,7 +398,7 @@
             els.categoriesContainer.innerHTML = html;
         }
 
-        // Search & Pagination Logic
+        // SEARCH & PAGINATION LOGIC
         function renderPagination(totalItems) {
             const totalPages = Math.ceil(totalItems / templatesPerPage);
             if (totalPages <= 1) {
@@ -408,16 +407,17 @@
             }
 
             let html = '';
-            // Prev
-            html += `<button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled class="page-btn text-slate-300"' : 'class="page-btn text-slate-600"'} aria-label="Previous">←</button>`;
             
-            // Numbers
+            // Prev
+            html += `<button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled class="page-btn text-slate-300"' : 'class="page-btn text-slate-600 hover:text-brand-600"'} aria-label="Previous">←</button>`;
+            
+            // Page Numbers
             for (let i = 1; i <= totalPages; i++) {
                 html += `<button onclick="changePage(${i})" class="page-btn ${currentPage === i ? 'active' : 'text-slate-600'}">${i}</button>`;
             }
 
             // Next
-            html += `<button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled class="page-btn text-slate-300"' : 'class="page-btn text-slate-600"'} aria-label="Next">→</button>`;
+            html += `<button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled class="page-btn text-slate-300"' : 'class="page-btn text-slate-600 hover:text-brand-600"'} aria-label="Next">→</button>`;
 
             els.paginationControls.innerHTML = html;
             els.paginationControls.classList.remove('hidden');
@@ -428,6 +428,7 @@
             if (page < 1 || page > totalPages) return;
             currentPage = page;
             renderSearchResults();
+            // Scroll to top of results
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
 
@@ -455,7 +456,7 @@
             els.searchResultsView.classList.remove('hidden');
             els.pageHeading.textContent = `Results for "${query}"`;
 
-            // Filter
+            // Filter logic
             currentSearchResults = allTemplates.filter(t =>
                 (t.title || '').toLowerCase().includes(q) ||
                 (t.description || '').toLowerCase().includes(q) ||
@@ -476,16 +477,17 @@
 
         async function init() {
             try {
+                // Fetch Data
                 const res = await fetch('/reply/templates.json', { cache: 'no-store' });
-                if(!res.ok) throw new Error("JSON not found");
+                if (!res.ok) throw new Error("Templates file not found");
                 
                 const data = await res.json();
                 allTemplates = Array.isArray(data) ? data : (data.templates || []);
-                
+
                 els.loadingState.classList.add('hidden');
                 organizeAndRenderCategories();
 
-                // Check URL params
+                // Check URL params for search redirect from homepage
                 const params = new URLSearchParams(window.location.search);
                 const q = params.get('search') || params.get('q');
                 if (q) {
@@ -498,7 +500,7 @@
             }
         }
 
-        // Event Listeners
+        // EVENT LISTENERS
         els.searchForm.addEventListener('submit', e => {
             e.preventDefault();
             const val = els.searchInput.value;
@@ -508,7 +510,6 @@
             performSearch(val);
         });
 
-        // Live filtering
         els.searchInput.addEventListener('input', e => {
             if (e.target.value === '') {
                 const url = new URL(window.location);
@@ -535,6 +536,7 @@
             });
         }
 
+        // Initialize
         document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
